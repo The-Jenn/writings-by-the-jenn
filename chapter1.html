@@ -15,43 +15,9 @@
             -ms-user-select: none;
         }
         h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
-        
         .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
         .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
         .back-link:hover { text-decoration: underline; }
-
-        /* Interaction Section Styles */
-        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
-        
-        /* Kudos */
-        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
-        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
-        .kudos-btn:hover { background-color: #d1d5c5; }
-        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
-        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
-
-        /* Subscribe */
-        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
-        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
-        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
-        .subscribe-area button:hover { background-color: #8c9360; }
-
-        /* Comments */
-        .comment-area h3 { text-align: left; }
-        .comment-input { width: 100%; height: 80px; padding: 10px; border: 1px solid #4b5320; border-radius: 2px; margin-bottom: 10px; font-family: 'Merriweather', serif; resize: vertical; box-sizing: border-box; }
-        .name-input { width: 100%; padding: 10px; border: 1px solid #4b5320; border-radius: 2px; margin-bottom: 10px; box-sizing: border-box; }
-        .comment-btn { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; float: right; }
-        .comment-btn:hover { background-color: #8c9360; }
-        
-        .posted-comments { margin-top: 50px; clear: both; }
-        .single-comment { background-color: #f4f1ea; border-left: 4px solid #8c9360; padding: 15px; margin-bottom: 15px; }
-        .comment-name { font-weight: bold; color: #4b5320; margin: 0 0 5px 0; }
-        .comment-body { margin: 0; font-size: 16px; }
-
-        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
-        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
-        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
-        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -64,99 +30,334 @@
         <p>The neighborhood was quiet. People left at the same time in the morning and returned at the same time at night. Lisa Swain liked it that way. She liked the predictability. After a long day dealing with the chaos of the world, the silence of the suburbs was exactly what she needed.</p>
 
         <p>She walked through the front door, dropping her keys on the hall table. Becky was already in the kitchen cooking.</p>
-        
-        <p>... <em>(Your full chapter 1 text remains exactly as we formatted it before)</em> ...</p>
+
+        <p>"You're late," Becky said, turning around with a wooden spoon in her hand. She smiled, brushing a stray piece of hair out of her face.</p>
+
+        <p>"Traffic," Lisa replied, walking over to kiss her wife on the cheek. "Where's Betsy?"</p>
+
+        <p>"Upstairs. Swears she’s doing her algebra, but I can hear music and talking."</p>
+
+        <p>Lisa laughed softly. They had a good life. It was safe, steady, and built on 13 years of solid partnership. Lisa was the glue that kept everything together, patient, organized, and deeply practical, she also made the money. Together, they made sense. Raising a teenager was never easy, but Betsy was a good kid, even if she did currently have a terrible attitude.</p>
+
+        <p>Lisa grabbed a bottle of water from the fridge and looked out the window above the sink. "Looks like someone finally bought the King place."</p>
+
+        <p>Becky turned to look. Next door, a massive moving truck was backed into the driveway. Three guys were struggling to carry a large, very expensive looking sofa up the front steps.</p>
+
+        <p>"Really? Have you seen who it is?" Becky asked.</p>
+
+        <p>"No," Lisa said, taking a sip of water. "Just the movers. Looks like they’ve got a lot of stuff."</p>
+
+        <p>"Well, let's hope they don't have loud dogs," Becky said, turning back to the stove."</p>
+
+        <p>"I'm sure they'll be fine," Lisa said. "I'm going to go change out of these work clothes."</p>
+
+        <p>———</p>
+
+        <p>Four days passed. The moving trucks vanished, replaced a black sports car that looked entirely out of place next to the neighborhood's standard lineup of minivans and sedans.</p>
+
+        <p>It was Saturday afternoon. Becky had taken Betsy to the mall to hunt for a dress for a school dance, leaving the house completely empty. Lisa was supposed to be cleaning out the garage, but she had gotten sidetracked organizing some old boxes in the upstairs guest room.</p>
+
+        <p>The room was warm, baking in the mid afternoon sun. Lisa walked over to the window to push it open and let in a breeze.</p>
+
+        <p>As she pushed the glass up, she glanced down into the neighbor's backyard. The previous owners had installed an inground pool right before they decided to move. For months, it had sat empty and covered. Now, the cover was off, the water was a sparkling blue, and someone was using it.</p>
+
+        <p>Lisa stopped, her hands resting on the window sill.</p>
+
+        <p>A woman was lying flat on her back on a sun lounger right at the edge of the water. She was wearing a white bikini. From the second story, Lisa had a perfectly clear view. The woman was tanned. She wasn't just thin, she was built. Lisa could clearly see the definition of muscle in her arms, a tight, strong core, and powerful legs. Dark hair spilled over the top of the cushion.</p>
+
+        <p>Lisa just stared. She didn't mean to, but she found herself entirely unable to look away.</p>
+
+        <p>There was a careless confidence in the way the woman lay there. She reached blindly for a glass on a small table beside her, took a sip, and set it back down without ever opening her eyes. The simple movement highlighted the flex of her shoulder.</p>
+
+        <p>Lisa felt a sudden, strange tightness in her chest. It was pure intrigue, something she hadn’t felt in a very long time. It felt entirely out of place in her quiet, predictable life.</p>
+
+        <p>She took a step back from the window, her heart beating faster than normal. She shook her head, feeling ridiculous.</p>
+
+        <p>But a few seconds later, she stepped back to the glass, just to look one more time.</p>
+
+        <p>Down below, Carla Connor was doing her absolute best to ignore her phone. It was vibrating against the concrete deck, buzzing with texts from people in the city she didn't feel like dealing with today.</p>
+
+        <p>Moving to the suburbs was supposed to be a joke. Or an escape. She hadn't quite decided yet.</p>
+
+        <p>She took another sip of her vodka tonic and let her head fall back against the towel. She was single, thirty eight, and notoriously terrible at slowing down. Her friends thought she had completely lost her mind buying a house out here among the families and the perfect lawns. They had a running bet on how long she would last before she got bored and moved back to her apartment in the city.</p>
+
+        <p>Carla closed her eyes, letting the sun bake into her skin. She loved the heat. She loved the feeling of doing absolutely nothing, at least for an afternoon. Last night had been a blur, a club opening, far too many drinks, and a guy whose name she forgot before she even paid the cab driver to take him home. It was the same routine she always ran, just starting from a different zip code.</p>
+
+        <p>She wasn't looking to settle down. She didn't want the quiet life. She just wanted a new playground, a place where she didn't know everyone's business and they didn't know hers.</p>
+
+        <p>She shifted on the lounger, adjusting the strings of her bikini top. She knew she stood out here. She liked standing out. The moving guys had tripped over themselves trying to carry her boxes inside, and she knew the neighborhood wives were probably already gossiping about the single woman with the expensive car and the loud music.</p>
+
+        <p>Let them talk, she thought, a smirk playing on her lips.</p>
+
+        <p>She didn't know who lived in the houses next door. She hadn't bothered to look. All she cared about right now was the sun, the alcohol in her glass, and the fact that she didn't have to answer to anyone.</p>
+
+        <p>She reached down, grabbed her phone, and finally switched it off completely, tossing it onto the grass. The suburbs were going to take some getting used to, but Carla never backed down from a challenge. She stretched her legs out, admiring her own tan, completely unaware of the eyes watching her from the window next door.</p>
+
+        <p>The rest of the weekend passed in a blur of domestic life. Lisa mowed the front lawn, fixed a leaky faucet in the downstairs bathroom, and tried to forget the attractive woman she saw out of the window.</p>
+
+        <p>By Tuesday evening, the heat had finally broken, leaving behind a warm, heavy breeze. Lisa was in the backyard, wrestling with a stubborn patch of weeds near the property line. A few yards away, Betsy was endlessly bouncing a tennis ball against the side of the brick patio, the noise pounding in Lisa's head.</p>
+
+        <p>"Betsy, take it easy on the brickwork," Lisa warned without looking up.</p>
+
+        <p>"I'm not hurting it," Betsy called back smiling.</p>
+
+        <p>And then, silence. Followed immediately by the rustle of leaves from the other side of the six foot wooden fence.</p>
+
+        <p>"Oops," Betsy muttered.</p>
+
+        <p>Lisa sighed, dropping her shovel and wiping her dirt-stained hands on her jeans. "Go inside and help your mother with the dishes. I'll get it."</p>
+
+        <p>Betsy didn't need to be told twice, immediately abandoning the patio and jogging back into the house.</p>
+
+        <p>Lisa walked over to the fence. It was tall enough for privacy, but there was a small gap near the oak tree where the wood had warped. She stepped on an exposed root to boost herself up just enough to see over the top.</p>
+
+        <p>She expected to see the ball sitting in the grass. Instead, she found herself staring directly at her new neighbor.</p>
+
+        <p>Carla Connor was sitting at a glass topped patio table. She wasn't in a bikini this time, but she didn't look any less out of place. She wore a black silk robe tied loosely at her waist, a pair of oversized sunglasses perched on top of her head, and she was holding a half empty glass of red wine. In her other hand, she held Betsy's neon green tennis ball.</p>
+
+        <p>Carla looked up. Her eyes locked onto Lisa’s face hovering just above the fence line. Her expression was completely unreadable.</p>
+
+        <p>Lisa suddenly felt very conscious of the dirt on her cheek and the old, faded t-shirt she was wearing.</p>
+
+        <p>"Hi," Lisa managed, her voice sounding a little too loud in the quiet yard. "I'm sorry about that. My daughter has a terrible backhand."</p>
+
+        <p>Carla didn't smile. She slowly turned the fuzzy green ball over in her hand, studying it for a second before looking back up. "You're the cop, right?"</p>
+
+        <p>Lisa blinked, caught off guard. "A detective, actually. Yes. Lisa Swain. I live next door." She gestured awkwardly to the house behind her, realizing how stupid it looked since she was literally hanging over the fence.</p>
+
+        <p>"Carla," she replied, her voice slightly raspy and completely devoid of cheer. She didn't bother to introduce herself further.</p>
+
+        <p>"Welcome to the neighborhood," Lisa offered, leaning her forearms on the top of the fence. She was trying for friendly, but the uninterested way Carla was looking at her made her skin crawl. "It's usually pretty quiet around here."</p>
+
+        <p>"I noticed," Carla said flatly. She took a slow sip of her wine. "Almost too quiet. Boring even."</p>
+
+        <p>The comment directed at her, Lisa felt a sudden, irrational urge to defend her boring life. "We just like our peace. That's all."</p>
+
+        <p>Carla finally smiled, but it didn't reach her eyes. It was a knowing, dangerous kind of smirk. She stood up, the silk robe slipping slightly off one shoulder. She walked over to the fence, stopping just on the other side. Up close, Lisa could smell an expensive, perfume cutting through the scent of the chlorine from the pool.</p>
+
+        <p>Carla tossed the tennis ball up lightly and caught it.</p>
+
+        <p>"Tell your kid to work on her aim, Detective," Carla said smoothly. She reached up and dropped the ball over the fence. It bounced harmlessly against Lisa's chest and fell into the grass.</p>
+
+        <p>By the time Lisa looked back over the wood, Carla was already turning away, walking back toward her house without another word.</p>
+
+        <p>Lisa dropped back down flat on her feet. She picked the tennis ball up off the grass, gripping it tightly in her hand, and stared at the solid wooden planks.</p>
+
+        <p>——-</p>
+
+        <p>Later Lisa was in the kitchen cooking. She gave the pasta sauce one last stir and turned the heat down to a simmer just as Becky walked into the room, dropping her bag on one of the dining chairs with a heavy sigh.</p>
+
+        <p>"Something smells amazing," Becky said. She walked over, wrapping her arms loosely around Lisa’s waist from behind and resting her chin on Lisa’s shoulder.</p>
+
+        <p>"Just penne and sausage," Lisa said, turning her head to press a quick kiss to Becky’s cheek.</p>
+
+        <p>"Where’s the teenager?" Becky asked, she had been with some friends in the city shopping.</p>
+
+        <p>"Upstairs. I told her dinner would be ready in ten minutes."</p>
+
+        <p>They sat down together at the small wooden table a few minutes later. They talked the usual stories, Becky’s friends being dramatic, the traffic on the bypass, a minor case Lisa had wrapped up at the precinct. It was comfortable.</p>
+
+        <p>"Oh, by the way," Lisa said, keeping her voice casual as she twirled a forkful of pasta. "I officially met the new neighbor today."</p>
+
+        <p>Becky paused, her fork halfway to her mouth. "You did? What’s she like? Did she come over?"</p>
+
+        <p>"No, Betsy hit her tennis ball over the fence. I had to go ask for it back." Lisa took a sip of water, trying not to think about the way Carla had looked at her. "Her name is Carla."</p>
+
+        <p>"And?" Becky pressed, clearly eager for some neighborhood gossip. "Is she nice? She seems like she has a lot of money, judging by that car in the driveway."</p>
+
+        <p>"She’s... different," Lisa said carefully. "A bit abrasive, honestly. I don't think she's used to living in a place like this."</p>
+
+        <p>Becky laughed lightly, shaking her head. "Well, she'll have to adjust. If she leaves her trash bins out past Tuesday morning, Mrs. Gallacher down the street will have a field day with her."</p>
+
+        <p>Lisa smiled, but before she could reply, a loud, heavy bass beat vibrated through the kitchen walls.</p>
+
+        <p>Becky frowned, looking toward the front of the house. "What is that?"</p>
+
+        <p>A car horn honked on their quiet street.</p>
+
+        <p>Lisa pushed her chair back and walked over to the small window above the kitchen sink, which looked out over their driveway and gave a partial view of Carla’s front yard. She pulled the blinds back with two fingers.</p>
+
+        <p>A black limo was idling at the curb, hip-hop music spilling out of its open windows.</p>
+
+        <p>A second later, Carla’s front door swung open. Lisa felt her breath hold slightly.</p>
+
+        <p>Carla stepped out into the warm evening air. She was wearing a tight, dark dress that ended high on her thighs and a pair of heels that looked hard to walk in. Her hair was down and straight. She was laughing loudly, turning back to say something to two other women who followed her out of the house.</p>
+
+        <p>"Who is it?" Becky asked from the table.</p>
+
+        <p>"It's her," Lisa said softly, not letting go of the blinds.</p>
+
+        <p>She watched as Carla walked down the front walkway. One of her friends shouted something, and Carla laughed, the sound carrying easily across the lawns. She pulled the limo door open, sliding into the backseat while her friends piled in after her. The door slammed shut, cutting off the music, and the limo sped off down the street.</p>
+
+        <p>Lisa stood at the window long after the taillights had disappeared around the corner.</p>
+
+        <p>It was a Tuesday night. The rest of the street was settling in for evening news and early bedtimes. Lisa looked down at her own reflection in the dark glass of the window, dressed in a faded t-shirt and sweatpants, her dinner getting cold on the table behind her.</p>
+
+        <p>She let the blinds snap back into place. She wondered exactly where Carla Connor was going, and why she couldn't stop thinking about it.</p>
+
+        <p>Wednesday morning started exactly the same way at 5:30 AM, the alarm on Lisa’s phone buzzed quietly. She slipped out of bed, careful not to wake Becky, and went downstairs to start the coffee.</p>
+
+        <p>The house was completely silent. This was usually Lisa's favorite time of day. It was the only hour where she didn't have to be a detective, a mother, or a wife. She just had to exist in the quiet kitchen.</p>
+
+        <p>She leaned against the counter, wrapping her hands around her warm mug, and stared out the front window at the street. The sky was just starting to turn a pale blue.</p>
+
+        <p>Then, the sound of an engine broke the stillness.</p>
+
+        <p>An unfamiliar silver sedan pulled up to the curb next door. Lisa watched through the window.</p>
+
+        <p>The back door opened, and Carla climbed out.</p>
+
+        <p>She was wearing the same dark dress from the night before, though it looked a little rumpled now. Her heels were dangling from two fingers on her left hand, and she was walking barefoot on the cool concrete of the driveway. Her hair was a tangled mess, Lisa could see the smudged makeup around her eyes.</p>
+
+        <p>She looked exhausted. She looked like a disaster. And yet, she somehow still carried herself like she owned the entire street.</p>
+
+        <p>The car drove off, leaving Carla standing alone in her driveway. She stopped for a moment, dropping her head back and taking a deep breath of the morning air. She ran her free hand through her hair, wincing slightly, then dug into a small clutch purse for her keys.</p>
+
+        <p>She dropped them.</p>
+
+        <p>The keys hit the pavement. Carla let out a heavy sigh, saying a curse that Lisa could just barely hear through the glass. She bent down to pick them up, moving with a slowness that screamed of a massive hangover.</p>
+
+        <p>Lisa watched her struggle with the front door lock. It was a Wednesday. Normal people were waking up for work, making school lunches, mentally preparing for staff meetings. Carla was just getting home from a Tuesday night bender.</p>
+
+        <p>It was reckless. It was everything Lisa spent her career dealing with and her personal life avoiding.</p>
+
+        <p>Carla finally pushed her door open. Before she walked inside, she paused and glanced over her shoulder. She didn't look at the street; she looked directly at Lisa’s house. For a split second, Lisa froze, wondering if Carla could see her standing in the dark kitchen.</p>
+
+        <p>But Carla just stared at the quiet, shook her head slightly, and disappeared inside.</p>
+
+        <p>Lisa let out a breath she didn't realize she was holding. She looked down at her coffee. It had gone lukewarm. Upstairs, she heard the faint sound of the shower turning on, Becky was awake. The routine was starting again.</p>
+
+        <p>For the first time in 13 years, the sound of the shower running upstairs didn't feel comforting. It felt like a ticking clock. Lisa dumped the rest of her coffee down the sink, her mind still replaying the image of Carla standing barefoot in the driveway.</p>
+
+        <p>Lisa left the house to head to the station. Another day of the same things.</p>
+
+        <p>The precinct was a zoo. It usually was by mid week, but today felt particularly crazy. Lisa spent the first three hours of her shift untangling a messy domestic dispute at a local diner, followed by endless paperwork and a tense briefing with her captain about a string of burglaries on the east side of town.</p>
+
+        <p>She thrived in this environment. The noise, the adrenaline, the clear lines of right and wrong it all made sense to her. Here, Detective Swain was respected, focused, and entirely in control.</p>
+
+        <p>But today, her focus kept slipping.</p>
+
+        <p>Every time she stared at a witness statement or paused to take a sip of coffee, her mind drifted back to the image of Carla. It was infuriating. She was a seasoned detective, she didn't get fixated on strangers. Yet, she found herself analyzing Carla’s posture, the smudge of her makeup, the careless way she held her shoes.</p>
+
+        <p>"Swain, you with us?"</p>
+
+        <p>Lisa snapped her head up. Her partner, Kit, was standing by her desk, holding out a file folder.</p>
+
+        <p>"Yeah, sorry. Just thinking about the case," Lisa lied smoothly, taking the folder.</p>
+
+        <p>"Right. Well, captain wants this followed up before shift end." Kit looked at her closely. "You alright? You look a million miles away."</p>
+
+        <p>"I'm fine," Lisa said, perhaps a little too sharply. "Just didn't sleep well."</p>
+
+        <p>She buried herself in work for the rest of the day, determined to push the new neighbor out of her head. By the time 5:00 PM rolled around, she was exhausted, nursing a headache, and more than ready for the predictable quiet of her own home.</p>
+
+        <p>The drive back to the suburbs was slow, the traffic heavy. When Lisa finally pulled into her driveway, the evening sun was setting.</p>
+
+        <p>She grabbed her bag from the passenger seat and walked toward the front door, the tension in her shoulders beginning to ease. She could hear the faint sound of the TV from inside Betsy was probably watching her shows.</p>
+
+        <p>Then, she heard voices coming from the backyard.</p>
+
+        <p>Lisa paused, her hand on the front doorknob. She recognized Becky's voice immediately bright, conversational, and high, the way she sounded when she was talking to people.</p>
+
+        <p>The other voice was lower, slower, and laced with an unmistakable tone.</p>
+
+        <p>Lisa walked around the side of the house, her footsteps quiet on the grass, until she reached the corner of the patio.</p>
+
+        <p>Becky was standing near the warped section of the fence, holding a pair of gardening shears. On the other side, leaning casually against the wood with a cigarette trapped between her fingers, was Carla.</p>
+
+        <p>Carla was wearing dark, oversized sunglasses that hid most of her face, a simple black tank top, and faded jeans. She looked completely relaxed, taking a slow drag from her cigarette and exhaling a thin stream of smoke into the air.</p>
+
+        <p>Becky was doing most of the talking. "...and the neighborhood association is pretty strict about the trash bins, but they're usually fine if you just bring them in by Wednesday night. Oh, and the block party is soon! You should definitely come by, it's a great way to meet everyone."</p>
+
+        <p>Carla looked bored. She wasn't being openly rude, but her body language screamed it. She tapped the ash from her cigarette against the fence post, her gaze drifting lazily over Becky's shoulder.</p>
+
+        <p>Then, Carla saw Lisa.</p>
+
+        <p>Even behind the dark lenses, Lisa could feel the shift in Carla's attention. The boredom vanished, she became focused. A slow smile spread across Carla's lips.</p>
+
+        <p>"Well," Carla said, her voice cutting smoothly through Becky's chatter. "Looks like the detective is home."</p>
+
+        <p>Becky saw Lisa "hi! I didn't hear you, I was just welcoming Carla to the neighborhood."</p>
+
+        <p>Lisa walked forward, her muscles tight. She forced a polite smile for her wife, but her eyes were fixed on the woman across the fence.</p>
+
+        <p>"I see that," Lisa said, stopping beside Becky. She looked at Carla. "Everything okay out here?"</p>
+
+        <p>"Perfectly fine, Detective," Carla said, taking another drag. She looked Lisa up and down, taking in her rumpled suit jacket and the tired lines around her eyes. "Your wife was just giving me the rundown on the local ordinances. Very informative."</p>
+
+        <p>There was a mocking edge to her tone that Becky completely missed.</p>
+
+        <p>"She was just telling me she works in the city," Becky said, completely oblivious to the sudden tension crackling between the two women. "Must be a rough commute."</p>
+
+        <p>"It has its moments, but I work from home too..I am a writer.." Carla said, her eyes never leaving Lisa's. She took one last drag of her cigarette, dropped it onto the ground, and crushed it slowly under the heel of her boot.</p>
+
+        <p>"Oh that's nice, a writer?" Becky said. "What do you write?"</p>
+
+        <p>Carla looked at Becky and then at Lisa. "Well nothing right now..I am having a bit of a writers block. Normally I write adult erotic novels." Carla looking at Lisa as she said it.</p>
+
+        <p>Lisa took a deep breath. Becky chimed in "Oh Wow, that is interesting, isnt it babe?"</p>
+
+        <p>Lisa stood there, distracted then snapped back to reality. " Uh yes, very."</p>
+
+        <p>Carla smirked. She knew they felt uncomfortable.</p>
+
+        <p>She pushed off the fence, standing to her full height.</p>
+
+        <p>"Well, it's been a thrill," Carla said, her voice dripping with sarcasm. "I must get back to it."</p>
+
+        <p>She gave Lisa a mocking little salute with two fingers. "See you around, neighbors."</p>
+
+        <p>Carla turned and walked back toward her house, her movements confident. Lisa and Becky stood in silence, watching her go, until the back door of Carla's house slammed shut.</p>
+
+        <p>"Well," Becky said, her voice slipping a little. "She's... interesting."</p>
+
+        <p>"Yeah," Lisa said, her pulse speeding up. "Interesting."</p>
+
+        <p>The house was finally asleep. Betsy had gone to bed at ten.</p>
+
+        <p>Lisa stood in the dark kitchen, a glass of tap water in her hand. She didn't really want a drink. She just wanted an excuse to be awake. Without turning on the lights, she drifted toward the window over the sink.</p>
+
+        <p>Next door, the underwater pool lights cast a glowing blue light across Carla’s patio.</p>
+
+        <p>Carla was outside. She was pacing the deck, her phone pressed against her ear. Even through the double paned glass, Lisa could see was bothered by whatever she was talking about on the phone.</p>
+
+        <p>She was arguing. Hard.</p>
+
+        <p>Lisa watched as Carla stopped pacing, pinching the bridge of her nose as she listened to whatever the person on the other end of the line was saying. The party girl was completely gone, leaving behind someone who looked exhausted, cornered, and very frustrated.</p>
+
+        <p>For a second, Lisa felt an urge to go out there. To step over the fence and ask what was wrong.</p>
+
+        <p>"You're still awake," a soft voice murmured.</p>
+
+        <p>Lisa jumped, water splashing slightly over the rim of her glass.</p>
+
+        <p>Becky stepped up behind her in the dark. She smelled like lavender soap. Before Lisa could step away from the window, Becky wrapped her arms around her waist, pressing her chest against Lisa’s back.</p>
+
+        <p>"Couldn't sleep," Lisa lied quietly, her eyes still fixed on the blue glow of the yard next door.</p>
+
+        <p>"Mmhmm," Becky hummed. She pressed a soft, lingering kiss to the side of Lisa's neck, just below her ear. Her hands slid slowly up Lisa's stomach.</p>
+
+        <p>Lisa knew exactly what that touch meant. It was Friday night. It was their routine.</p>
+
+        <p>Outside, Carla abruptly pulled the phone away from her ear, stared at the screen for a second, and threw it hard onto a padded patio chair. She slumped down onto the edge of a lounger, burying her face in her hands.</p>
+
+        <p>Becky’s lips moved to Lisa’s shoulder, her breathing shifting, growing a little heavier.</p>
+
+        <p>"Come to bed," she whispered against Lisa's skin.</p>
+
+        <p>Lisa felt a sudden, suffocating wave of guilt. She was standing in the dark, held by her wife of 13 years, but her pulse was racing for the stranger having a breakdown on the other side of the fence.</p>
+
+        <p>She closed her eyes, shutting out the sight of the pool and the woman sitting beside it.</p>
+
+        <p>"Okay," Lisa said softly.</p>
+
+        <p>She set her water glass down on the counter, turned her back on the window, and let Becky lead her up the stairs in the dark, giving in to a life she suddenly felt completely disconnected from.</p>
     </div>
 
-    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
-    <div class="interaction-box">
-        
-        <!-- Kudos Section -->
-        <div class="kudos-area">
-            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
-            <p class="kudos-text"><span id="kudosCount">24</span> Kudos left on this work</p>
-        </div>
-
-        <!-- Subscribe Section -->
-        <div class="subscribe-area">
-            <h3>Subscribe to The Jenn</h3>
-            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
-            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
-        </div>
-
-        <!-- Comment Section -->
-        <div class="comment-area">
-            <h3>Leave a Comment</h3>
-            <input type="text" id="commentName" class="name-input" placeholder="Your Name">
-            <textarea id="commentText" class="comment-input" placeholder="What did you think of this chapter?"></textarea>
-            <button class="comment-btn" onclick="postComment()">Post Comment</button>
-
-            <!-- Where posted comments will appear -->
-            <div class="posted-comments" id="commentsList">
-                <!-- Example of a previously left comment -->
-                <div class="single-comment">
-                    <p class="comment-name">Guest</p>
-                    <p class="comment-body">Love this dynamic already! Can't wait for chapter 2.</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-    <div id="toast">Message sent!</div>
-
-    <!-- Interactive Scripts -->
     <script>
-        // Disable copy shortcuts
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
         });
-
-        // Toast Notification
-        function showToast(message) {
-            var toast = document.getElementById("toast");
-            toast.innerText = message;
-            toast.className = "show";
-            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
-        }
-
-        // Kudos Button Logic
-        let kudosGiven = false;
-        function leaveKudos() {
-            if(!kudosGiven) {
-                let countSpan = document.getElementById("kudosCount");
-                let currentCount = parseInt(countSpan.innerText);
-                countSpan.innerText = currentCount + 1;
-                let btn = document.getElementById("kudosBtn");
-                btn.innerText = "♥ Kudos Left!";
-                btn.classList.add("clicked");
-                kudosGiven = true;
-                showToast("Thank you for leaving kudos!");
-            }
-        }
-
-        // Comment Posting Logic (Visual only)
-        function postComment() {
-            let nameInput = document.getElementById("commentName").value;
-            let textInput = document.getElementById("commentText").value;
-            
-            if(textInput.trim() === "") {
-                showToast("Please write a comment first!");
-                return;
-            }
-            
-            if(nameInput.trim() === "") { nameInput = "Guest"; }
-
-            let newComment = document.createElement("div");
-            newComment.className = "single-comment";
-            newComment.innerHTML = "<p class='comment-name'>" + nameInput + "</p><p class='comment-body'>" + textInput + "</p>";
-            
-            document.getElementById("commentsList").prepend(newComment);
-            
-            document.getElementById("commentName").value = "";
-            document.getElementById("commentText").value = "";
-            showToast("Comment posted!");
-        }
     </script>
 </body>
 </html>

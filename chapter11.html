@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 11</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 11: Tension</h1>
+        
+        <p><em>Chapter Notes: Short Chapter, I had it in drafts for a bit, but have more coming soon!</em></p>
+        
+        <p>Becky’s minivan pulled into the driveway right at 3:00 PM, Lisa was already standing at the front door, forcing a smile. She had gone in at 5am and was already home From Work.</p>
+        
+        <p>She took Becky’s bags, kissed her, and spent the first hour inside listening to every detail of the weekend tournament.</p>
+        
+        <p>Lisa sat and acted like the perfect wife. But thinking of Carla and how she smelled.</p>
+        
+        <p>"Let's go sit out back," Becky suggested around five o'clock, grabbing a bottle of chilled wine from the fridge. "I missed our patio. I need to unwind.”</p>
+        
+        <p>Lisa opened the back door, stepping out onto the patio. And there, sitting perfectly undisturbed on the rim of the stone fire pit, was the bottle of expensive bourbon and the two heavy crystal glasses.</p>
+        
+        <p>Lisa got nervous. The heat of the moment with Carla had made her forget to clean up.</p>
+        
+        <p>"Oh," Becky said, pausing with the wine glasses in her hand. She looked at the fire pit, then raised an eyebrow at Lisa with a teasing smile. "Having a party without me?"</p>
+        
+        <p>Lisa was shaking a bit but played it off.</p>
+        
+        <p>"No," Lisa lied, her voice steady as she walked over to grab the bottle and the glasses. "Because the power was out for hours yesterday. Carla was going stir-crazy over there with no AC, so she came over. We had a quick drink during the day just to pass the time until it came back on."</p>
+        
+        <p>"That’s nice of you to check on her," Becky said cheerfully accepting the lie.</p>
+        
+        <p>She sat down in one of the chairs and started pouring the wine. "She's probably lonely in that big house all by herself."</p>
+        
+        <p>Lisa brought the bourbon glasses inside, her hands shaking so violently she almost dropped one in the sink.</p>
+        
+        <p>She gripped the edge of the counter, squeezed her eyes shut, and took a deep breath. Lock it down, she ordered herself. You are fine.</p>
+        
+        <p>Lisa walked back outside and sat next to Becky, intentionally sliding her chair closer so their knees brushed.</p>
+        
+        <p>The perfect, attentive wife.</p>
+        
+        <p>Just as Lisa was finally settling her heart rate, the gate on Carla's side of the fence opened.</p>
+        
+        <p>Carla walked out carrying a white trash bag. She was wearing a pair of worn-in denim shorts and a loose, thin gray t-shirt, her dark hair pulled up.</p>
+        
+        <p>She looked oblivious to them, but the second she tossed the bag into the bin and turned around, her eyes locked directly onto Lisa’s.</p>
+        
+        <p>"Carla! Hey!" Becky called out, waving from her chair.</p>
+        
+        <p>Carla froze. She looked at Becky, and then her gaze flicked slowly back to Lisa. A smile immediately slid into place.</p>
+        
+        <p>Carla offered a polite, neighborly smile. "Hi, Becky. Welcome home."</p>
+        
+        <p>"Thanks! Come over!" Becky motioned with her wine glass. "Come have a drink with us. Lisa was just telling me you guys hung out yesterday while the power was still down."</p>
+        
+        <p>Lisa stopped breathing. She stared at Carla, silently, desperately pleading with her not to accept the invitation.</p>
+        
+        <p>Carla held Lisa’s gaze for a fraction of a second too long. "Sure," Carla said, her voice a bit raspy. "I'd love to."</p>
+        
+        <p>Carla walked up to the patio. And sat down.</p>
+        
+        <p>"So, how was the tournament?" Carla asked, accepting the glass of wine Becky handed her.</p>
+        
+        <p>"Oh, it was great. Betsy played her heart out," Becky gushed.</p>
+        
+        <p>For the next twenty minutes, Lisa lived in a state of torture.</p>
+        
+        <p>She sat perfectly still, her arm draped affectionately across the back of Becky's chair, playing the role of the devoted partner.</p>
+        
+        <p>She nodded when she was supposed to nod. She laughed at Becky's jokes.</p>
+        
+        <p>But her entire body was tense.</p>
+        
+        <p>Carla was a damn good actor she thought.</p>
+        
+        <p>She engaged Becky in conversation, asking the right questions, smiling warmly.</p>
+        
+        <p>But Carla’s eyes would drift to Lisa occasionally.</p>
+        
+        <p>Carla would look at Lisa's hand resting on Becky's shoulder, and then slowly meet Lisa's eyes.</p>
+        
+        <p>It was absolute agony.</p>
+        
+        <p>Lisa looked at Carla sitting there and suddenly all Lisa could think about was the night before.</p>
+        
+        <p>She remembered exactly how Carla had sounded when Lisa shoved her forcefully against the gate.</p>
+        
+        <p>"Lisa?" Becky asked, reaching over and patting Lisa's knee. "Right, babe?"</p>
+        
+        <p>Lisa blinked hard, snapping back to reality. "Yeah," she managed to say, her voice coming out a little rougher than intended. "Yeah, definitely."</p>
+        
+        <p>Carla took a slow sip of her wine, her eyes burning right through Lisa's perfect-wife act.</p>
+        
+        <p>Carla knew exactly what Lisa was thinking.</p>
+        
+        <p>Lisa hated herself for the lie. But as Carla shifted crossed her legs, the denim shorts riding up her thighs just a fraction of an inch, Lisa realized the most terrifying truth of all.</p>
+        
+        <p>She didn't want Carla to leave.</p>
+        
+        <p>She wanted Becky to go inside, so she could back Carla up against that gate again and finish exactly what they started.</p>
+        
+        <p>"So then the coach calls a timeout," Becky was saying, completely oblivious to the silent war happening in Lisa’s head.</p>
+        
+        <p>"And Betsy is just standing there, hands on her knees, totally exhausted..."</p>
+        
+        <p>Lisa nodded, but she didn't hear a single word. Her entire focus was funneled into the way Carla’s throat worked as she swallowed the wine.</p>
+        
+        <p>Carla was actively daring her. She was sitting in the middle of Lisa's life, causing chaos in Lisa’s brain.</p>
+        
+        <p>Lisa knew that if she sat there for one more minute, she was going to do something completely stupid.</p>
+        
+        <p>She wanted to fuck Carla. And badly. She needed to excuse herself.</p>
+        
+        <p>Lisa reached into the front pocket of her jeans and pulled out her cell phone.</p>
+        
+        <p>She unlocked the screen, her thumb hovering over an old, read message from the precinct.</p>
+        
+        <p>She kept her face perfectly blank, and tapped the screen once before letting out a frustrated sigh.</p>
+        
+        <p>"Damn it," Lisa muttered, sitting forward and dropping her arm from Becky's chair.</p>
+        
+        <p>Becky paused her story, looking over with immediate concern. "Everything okay?"</p>
+        
+        <p>"No, it's work," Lisa lied, standing up and sliding her phone back into her pocket. "We've got a break in the a case. I need to pull up the files on my laptop right now before the DA’s office closes."</p>
+        
+        <p>"Oh, babe. Right now?" Becky frowned, the disappointment clear in her voice. "You've been working all weekend."</p>
+        
+        <p>Another lie.</p>
+        
+        <p>"I know I'm sorry," Lisa said, "It should only take about twenty minutes. I just have to send an email."</p>
+        
+        <p>"It's fine, go handle it," Becky sighed, waving her hand. "Carla and I will hold down the fort out here."</p>
+        
+        <p>"Thanks," Lisa said.</p>
+        
+        <p>She turned and practically ran across the patio. And in to the kitchen.</p>
+        
+        <p>She walked down the hallway, pushed the door to her home office open, and stepped inside.</p>
+        
+        <p>She walked straight to her desk, slumped into the chair, and buried her face in her hands.</p>
+        
+        <p>But as Lisa sat there in the dark, she realized she could hear out of the window.</p>
+        
+        <p>"She works too hard," Becky was saying, her voice echoing.</p>
+        
+        <p>"She's a very dedicated detective," Carla replied.</p>
+        
+        <p>Lisa squeezed her eyes shut. Hearing Carla’s low, raspy voice. God she wanted her.</p>
+        
+        <p>Then, a few seconds later, Carla laughed at something Becky said. Get a grip Lisa thought. She sat back listening to them. She closed her eyes.</p>
+        
+        <p>She needed to do something.. she just didn’t know what.</p>
+    </div>
+
+    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">68</span> Kudos left on this work</p>
+        </div>
+
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+
+        <!-- Real Disqus Comment Section -->
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter11"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 15</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 15: Restless</h1>
+        
+        <p>Carla walked into the kitchen and started the coffee maker. She poured herself a cup.</p>
+        <p>She set it on the desk, opened her laptop, and immediately brought up her story.</p>
+        <p>She rested her fingers on the keys and started to type, letting the scene play out in her head.</p>
+        <p>::::::::Detective Beth Casey was married to a man, and Erin Sutton knew it. But honestly, Erin didn't care. She had been sleeping with the detective for a month now, and despite the complicated mess of it all, Erin was beginning to catch real feelings for Beth. One night, Erin was sitting at the usual dive bar when Beth walked in, with her asshole husband, Ben. He was a police Lieutenant, and he immediately clocked Erin sitting in the corner. Ben leaned in, whispering to Beth about his absolute dislike for the woman. He rattled off her past charges, complaining about her undeniable cockiness. He made it perfectly clear he wanted to take Erin down, actively trying to find a way to prove she was guilty of a few new fraud charges. Beth stood there, nodding and listening like the perfect, supportive wife. But beneath the polite mask, she didn't care about the law or the charges. All Beth really wanted was for Erin to pin her down and fuck her senseless again.:::::::</p>
+        <p>Carla stopped typing. She stared at the screen for a long moment before quietly closing the laptop.</p>
+        <p>She leaned back in her chair, her thoughts drifting away from her fictional characters and settling squarely on Lisa.</p>
+        <p>She thought about the strength the detective possessed. The memory of the way Lisa had picked her up, moving her around the room and pinning her against the wall, made her wet.</p>
+        <p>She thought about the countless, intense orgasms she had already experienced at Lisa's hands.</p>
+        <p>It made her wonder if every woman was this amazing to sleep with.</p>
+        <p>Carla had certainly thought about it over the years, looking at beautiful girls she had met along the way, but she had never actually done anything about it.</p>
+        <p>She had never taken the leap. Not until Lisa.</p>
+        <p>The memories made her smile, but she hated being alone sometimes. She needed energy. She needed a distraction.</p>
+        <p>Carla pulled out her phone and started scrolling through her contacts. She decided right then to throw a little get-together.</p>
+        <p>She started texting, planning a little party and inviting a bunch of her friends from the city, other writers, editors, and people she knew.</p>
+        <p>Later that day Carla saw Becky checking the mail. She decided to step out and talk to her.</p>
+        <p>"Hey, Becky," Carla yelled.</p>
+        <p>Becky looked up, a smile instantly appearing on her face. "Oh, hey Carla! How's the writing going today?"</p>
+        <p>"It's going," Carla smiled, stopping just a few feet away. "Actually, I needed a bit of a break from the screen. The house is a little too quiet, so I decided to throw a last minute get together tonight. Just some friends from the city, a few writers, some drinks. I'd love it if you and Lisa could come."</p>
+        <p>Becky’s face lit up. "Oh, that sounds so fun! We haven’t been to a party in a while. I am totally in.“</p>
+        <p>"Great," Carla said. "What about Lisa? Think she'd be up for it?"</p>
+        <p>"Oh, definitely," Becky laughed, casuall. "She's off shift tomorrow so she wil be good with doing something tonight. It'll be really good for her to get out of the house and socialize. She's been so tense with work lately. A few drinks will do her good."</p>
+        <p>"Perfect," Carla said.</p>
+        <p>"I'll text her in a bit and give her the details!" Becky said cheerfully. "See you later, Carla."</p>
+        <p>Carla watched Becky turn and walk back up the driveway. She folded her arms across her chest, feeling the adrenaline start to pump in her veins.</p>
+        <p>She just wanted to be in the same room As Lisa.</p>
+        <p>Lisa got home at 10:00 PM, and she was tired. She hadn't seen or spoken to Carla in over a week, and the silence between them had left her frustrated.</p>
+        <p>She knew she had absolutely no right to be mad, but she was.</p>
+        <p>Becky had text her earlier to tell her about the party and had already gone over.</p>
+        <p>Lisa had been reluctant to attend, but Becky had made her promise she would at least make an appearance.</p>
+        <p>Standing in her bedroom, Lisa looked out the window. She saw the cars lining the street and the lights in Carla's backyard.</p>
+        <p>People were gathered around the pool, dressed sharply, drinks in hand and she could hear music.</p>
+        <p>Her stomach tied in knots. She was genuinely nervous.</p>
+        <p>She took her time getting dressed, putting more effort in than normal.</p>
+        <p>She wore a white tank top tucked into dark jeans with a nice leather belt. She put on a pair of heels, and put a nice necklace on, and flat ironed her hair making it straight.</p>
+        <p>Her makeup was flawless. Looking at her reflection, Lisa didn't bother lying to herself, she knew exactly what she was doing. She was dressing for Carla, not Becky.</p>
+        <p>Lisa walked across the grass and stepped up onto Carla’s front porch. She froze. What the hell am I doing? She closed her eyes, taking a deep.</p>
+        <p>Suddenly, the front door flew open. Lisa jumped, startled, as a laughing couple walked out, completely ignoring her as they went over to the edge of the porch to light their cigarettes.</p>
+        <p>Lisa moved past them and walked through the open door.</p>
+        <p>There were so many people. Lisa walked through the crowded living room looking for Carla. She saw her.</p>
+        <p>She was sitting on another woman’s lap. Carla had her arms wrapped casually around the woman's neck, throwing her head back in a laugh as she held the attention of everyone around her.</p>
+        <p>Lisa stopped. She didn’t like what she was looking at.</p>
+        <p>"Hey babe!“ Becky appeared out of nowhere, her words slurred.</p>
+        <p>She threw her arms around Lisa and planted a sloppy kiss on her mouth.</p>
+        <p>Lisa was stunned. Becky never drank like this. She might have a glass of wine a few nights a week, but she never got genuinely drunk.</p>
+        <p>"Hi, babe," Lisa said, kissing her back.</p>
+        <p>Becky grabbed Lisa's hand and pulled her toward the group she had been hanging out with. "Here she is, my wife, Lisa!" Becky bragged loudly.</p>
+        <p>People smiled and shook Lisa's hand, while Lisa forced a polite smile, her peripheral vision locked on the table across the room.</p>
+        <p>At the table, Carla was leaning into the girl.</p>
+        <p>She told herself she was just doing it for research purposes. The girl whose lap she was sitting on was gorgeous and undeniably sexy, but she wasn't Lisa.</p>
+        <p>The girl kept staring at Carla’s lips, making it obvious she wanted to kiss her. And maybe, Carla thought, she would let her at some point.</p>
+        <p>Carla turned her head, continuing a story for the group about a book she had written years ago, when her eyes caught Lisa across the room.</p>
+        <p>Lisa was standing there, only half listening to Becky's drunk talk.</p>
+        <p>The entire room felt like it went quiet and dark. The crowd, the music, the laughter, it all just vanished.</p>
+        <p>It was only the two of them. Carla's heart skipped, completely forgetting there was a woman beneath her.</p>
+        <p>Lisa just looked at her. Across the distance, Lisa's eyes were screaming an apology.</p>
+        <p>She was telling Carla how sorry she was, how horrible she felt that Becky had carelessly discussed their sex life, and how much she hated that it had caused Carla pain.</p>
+        <p>Carla swallowed hard. She broke the gaze, turning her head back to the group and forcing herself to continue the story.</p>
+        <p>The girl beneath her got a little more handsy, her palms resting firmly on Carla's hips, and Carla made her laugh, leaning into the touch.</p>
+        <p>Lisa watched it happen. She turned back to Becky, forcing a fake smile as if she had been listening the whole time.</p>
+        <p>"I'm going to find a drink, yeah? I'll be right back." Lisa said not caring if Becky heard.</p>
+        <p>Lisa walked away, walking into the kitchen. She stopped, looking at the table, and then at the counter.</p>
+        <p>She remembered exactly how hard she had fucked Carla on both of them.</p>
+        <p>She walked up to the counter, standing in the exact same spot she had pinned Carla against last week. The drinks were set up like a mini bar.</p>
+        <p>She reached out and grabbed a beer.</p>
+        <p>"Last time you were standing there, you were fucking the shit out of me, Detective." Carla whispered from behind her, right into Lisa's ear.</p>
+        <p>Chill bumps ran down Lisa’s arms. She didn't speak. She didn't move away.</p>
+        <p>Instead, Lisa leaned her back just slightly into Carla, closing her eyes and breathing in the intoxicating scent of Carla.</p>
+        <p>Carla’s hands came up, slowly reaching around Lisa's waist. For a second, Lisa thought Carla was going to hold her.</p>
+        <p>Instead, Carla's hand bypassed her, grabbing a bottle of red wine off the counter.</p>
+        <p>"Excuse me," Carla murmured softly.</p>
+        <p>Lisa turned around. They were inches apart. Carla looked up at her, and her eyes were saying: This could be yours.</p>
+        <p>"Hey, Carla," Lisa managed, her voice thick. "How are you?"</p>
+        <p>"Yeah, I'm alright," Carla replied, not breaking eye contact as she poured the wine into her glass.</p>
+        <p>Carla's looked at Lisa's lips for a long second.</p>
+        <p>"Hey!"</p>
+        <p>The stares gone. The girl Carla had been sitting on walked into the kitchen, stepping right up behind her and wrapping her arms comfortably around Carla's waist.</p>
+        <p>Lisa’s eyes dropped to the woman's hands touching Carla. She was angry. She wanted to knock the woman out cold.</p>
+        <p>"Come back to the table," the girl said in a pouty voice, leaning in close to Carla's face. "We are dying to know the rest of that story."</p>
+        <p>Lisa just stood there, clenching her teeth, watching as Carla offered a smile. Carla was definitely enjoying whatever it was she was doing to her.</p>
+        <p>Out by the pool, Becky had made her way with the group she had taken to and they were doing shots.</p>
+        <p>Lisa stood alone in the kitchen, watching through the glass. She turned her back to the yard, leaned against the counter, and took a long swig of her beer.</p>
+        <p>She looked back in Carla’s direction at the table and saw Carla leaning down, kissing the girl she had been sitting on.</p>
+        <p>Lisa felt incredibly dumb and juvenile. And then jealousy came over her. Carla stood up, grabbed the girl by the hand, and started leading her out of the living room and down the hallway.</p>
+        <p>Lisa couldn't handle it. She slammed her beer down on the counter and walked across the room, intercepting them just before they disappeared.</p>
+        <p>"Hey," Lisa said, a little breathless. "Can we talk."</p>
+        <p>"Detective, I’m kind of busy."</p>
+        <p>Internally, Carla had absolutely no plans to sleep with this girl. She was doing this strictly to make Lisa jealous. She knew it was juvenile, she knew it was petty, but standing there watching Lisa unravel, she found she just didn’t care.</p>
+        <p>"Please," Lisa pleaded, her voice cracking slightly, stripped of all her usual authority. "I just need to talk to you."</p>
+        <p>Carla looked at Lisa's eye, they were desperate. Carla looked at the girl. "I have to..." she said.</p>
+        <p>"Uh, yeah. Okay," the girl said, looking between the two of them before turning and walking back toward the party.</p>
+        <p>The second they were alone, Lisa grabbed Carla by the arm, pulled her into the nearby bathroom, and slammed the door shut. She shoved Carla against the wall and kissed her. It wasn't gentle, it was desperate.</p>
+        <p>Carla melted against her as she opened her mouth for the detective.</p>
+        <p>Lisa pulled away, breathing heavy. The possessive lust she felt was twisting into something much deeper, something she couldn't control.</p>
+        <p>She looked at Carla's eyes, then down to her lips. Lisa leaned in again, kissing her passionately, tasting her. The only thing in the world she wanted right then was Carla.</p>
+        <p>"Lisa..." Carla whispered against her lips.</p>
+        <p>"I’m sorry," Lisa whispered back. She pressed her forehead against Carla’s, squeezing her eyes shut tight.</p>
+        <p>Carla lifted her hands, wrapping her arms around Lisa’s neck, and squeezed. She held her.</p>
+        <p>It was their first real hug,, not sexual, just an embrace. Lisa stood there in the bathroom, absolutely terrified by how perfectly right it felt to be held by her.</p>
+        <p>Lisa took a deep breath. She leaned in and kissed Carla slowly.</p>
+        <p>Bang, bang, bang!</p>
+        <p>They both jumped, ripping apart as someone pounded on the door.</p>
+        <p>"We got someone who isn’t feeling well we need the toilet!" one of Carla’s friends yelled through the door, laughing.</p>
+        <p>Carla took a breath, and opened the door. Two guys were standing in the hallway, practically holding Becky upright.</p>
+        <p>Becky had clearly drank way too much, her face was pale.</p>
+        <p>Carla looked back at Lisa. Her eyes were so incredibly sad, and deeply frustrated.</p>
+        <p>Lisa gave her a helpless look, then stepped forward, reaching out to take her wife.</p>
+        <p>"Lisa. Hi," Becky slurred, completely drunk, entirely oblivious to the fact that her wife and Carla had just been locked in a bathroom together.</p>
+        <p>"Hey you, let's get you home," Lisa said gently.</p>
+        <p>She looked at the two guys. "I’ll take it from here, guys. Thanks."</p>
+        <p>They nodded and backed away. Lisa wrapped her arm around Becky's waist. She looked over her shoulder at Carla, her eyes silently begging for forgiveness.</p>
+        <p>But Carla didn't say a word. She just stood there in the doorway, watching them leave.</p>
+        <p>Within an hour, Lisa had gotten Becky home and the last of Carla’s guests had finally trickled out.</p>
+        <p>The house was empty again. Carla walked out to the edge of the pool, holding an open bottle of red wine.</p>
+        <p>She didn't bother with a glass, she just took a long drink straight from the bottle, zoning out as she stared at the glowing blue water.</p>
+        <p>All she could think about was Lisa. The way she tasted. The way she had held her. Carla's lust for this woman was rapidly spinning out of control.</p>
+        <p>Next door, Lisa was putting Becky to bed. Her wife's sickness had thankfully subsided, but she was exhausted.</p>
+        <p>Once Becky was tucked. Lisa went downstairs to clean up the kitchen and turn off the lights.</p>
+        <p>She paused at the sink, looking out the window into the dark.</p>
+        <p>She saw Carla sitting by the pool. Alone.</p>
+        <p>Lisa’s heart ached for her. She was playing with Carla's emotions, dragging her through the mud of her own complicated, failing marriage, and in return, Carla was completely wrecking Lisa's entire life.</p>
+        <p>Lisa turned away from the window and went quietly back upstairs. She checked the bedroom. Becky was fast asleep, softly snoring.</p>
+        <p>Lisa walked back downstairs, unlocked the back door, and stepped out into the night.</p>
+        <p>She walked across the grass, straight to the fence, unlatched the gate, and walked through.</p>
+        <p>Carla heard the click. She turned her head, sitting up a little straighter.</p>
+        <p>Lisa walked toward her, the blue lights of the pool shining on her. She didn't say a word.</p>
+        <p>Lisa just reached down, grabbed Carla’s hand, and pulled her to her feet.</p>
+        <p>Carla didn't hesitate. She put her fingers through Lisa's and slowly pulled her inside the house, leading her straight down the hall to her bedroom.</p>
+        <p>Carla walked Lisa backward to the bed. Carla reached out and slowly pulled Lisa’s white tank top over her head, dropping it to the floor.</p>
+        <p>Carla let her eyes drag over Lisa’s toned body.</p>
+        <p>She reached for Lisa's waist, slowly unbuckling the leather belt, pulling it from the loops, and letting it drop.</p>
+        <p>She popped the button of Lisa's jeans, pulling the zipper down, and slowly slid the jeans down Lisa's legs until she stepped out of them.</p>
+        <p>Lisa stood before her in nothing but her bra and underwear, her chest rising and falling nervously.</p>
+        <p>Carla hooked her fingers into the waistband of Lisa's underwear, sliding them down her thighs, and gently pushed Lisa back so she was sitting on the edge of the bed.</p>
+        <p>Carla knelt between her legs. She lowered her head, pressing her mouth against Lisa. She kissed her clit slowly, sucking just a little, letting her tongue taste her.</p>
+        <p>Lisa’s head dropped back, she moaned. She leaned back on her elbows, completely surrendering, just watching Carla.</p>
+        <p>Carla lifted her head. The two women locked eyes.</p>
+        <p>Carla climbed up onto the bed, straddling Lisa's legs.</p>
+        <p>She pulled her own shirt over her head, tossing it aside. She leaned forward, her hand moving between them, and slowly pushed two fingers into Lisa.</p>
+        <p>"Carla..." Lisa whispered, her voice shaking.</p>
+        <p>"Shhhh," Carla whispered back, her lips brushing Lisa's ear. "Please. I want you."</p>
+        <p>Carla pushed deeper. Both of them started moving their hips.</p>
+        <p>Carla kissed Lisa hard, as her fingers pushed in and out of her.</p>
+        <p>Lisa desperately needed this. She needed to be fucked, to be taken completely by this woman. Her body had been starving for it.</p>
+        <p>Carla shifted her weight, moving fully between Lisa's legs and pulling her up so they were sitting face to face. Carla pushed her fingers even deeper, keeping unbroken eye contact.</p>
+        <p>"You’re so beautiful, Lisa," Carla said completely vulnerable.</p>
+        <p>Lisa’s smiled. She saw something flash in Carla’s eyes when she said it, something real. Lisa rocked her hips forward, completely giving herself to Carla.</p>
+        <p>Carla picked up the pace. The only sounds in the house were them moaning and the bed shifting.</p>
+        <p>Lisa wrapped her arms tightly around Carla’s neck, holding on. Carla pushed harder, finally taking control, properly fucking the detective.</p>
+        <p>Carla couldn't look away from Lisa’s body. The flex of her muscles, the way the sweat made her skin shine in the moonlight.</p>
+        <p>She watched Lisa roll her hips in a circular motion.</p>
+        <p>Carla looked down, watching her own fingers sliding in and out of Lisa.</p>
+        <p>It was the hottest thing she had ever seen. She had never felt anything quite like this before.</p>
+        <p>She pushed harder, deeper, and Lisa moaned everyone Carla pushed in, riding Carla's hand with everything she had.</p>
+        <p>Lisa came hard she squeezed her legs around Carla’s ribs. Carla felt wetness coat her fingers.</p>
+        <p>Carla pushed hard and fast. Grabbing her hip and pushing her fingers in more. Lisa screamed Carla’s name.</p>
+        <p>Lisa lifted up on her hands and pumped her hips faster. Carla kept going. Watching Lisa fall apart. Carla got up on her knees. Holding Lisa’s around her waist pushing in so hard that Lisa came again.</p>
+        <p>“Carla …. Fuck Carla..” she moved her hips faster until she just couldn’t move anymore.</p>
+        <p>They slowly collapsed against each other, breathing heavy, completely covered in sweat. Lisa had never felt anything like that before.</p>
+        <p>——-</p>
+        <p>Lisa slowly opened her bedroom door. It creaked. She paused, holding her breath, but the sound of Becky snoring from the bed didn't change.</p>
+        <p>Stepping carefully across the room, Lisa quietly took off her clothes. Cleaned up in the bathroom and put pjs on. She crawled in to bed lying flat on her back and staring up at the ceiling.</p>
+        <p>Her entire body was still on fire. She could still feel Carla's fingers inside her. Carla had been so intensely focused. For someone who was completely new to being with a woman, she was a natural, doing absolutely everything right to Lisa's body.</p>
+        <p>Lisa closed her eyes and smiled. She was so satisfied. She already couldn't wait to do it again.</p>
+        <p>The next morning, Lisa was sitting in the kitchen in her PJ’s, sipping her coffee and scrolling through her phone, when her Becky finally came downstairs.</p>
+        <p>Becky looked absolutely miserable. She was wearing oversized sweatpants, her hair was messy.</p>
+        <p>"Morning, lightweight," Lisa teased.</p>
+        <p>Becky groaned, pulling a tall glass from the cabinet and filling it with water.</p>
+        <p>"Don't. My head is actively throbbing. I feel absolutely horrible."</p>
+        <p>"You were definitely having fun like a teenager last night," Lisa said, taking a slow sip of her coffee. "</p>
+        <p>"Oh my god, please tell me I didn't do anything embarrassing," Becky asked. She closed her eyes. "I don't even remember coming home. The last thing I remember is talking to some guy named Mark."</p>
+        <p>"You were fine," Lisa lied smoothly, the memory of her drunk wife interrupting them in Carla's bathroom flashing through her mind.</p>
+        <p>"Just a little loud. A couple of Carla's friends helped you and I took you home."</p>
+        <p>Becky’s eyes snapped open, horrified. "Her friends helped me? Oh, no. Lisa, that is so embarrassing."</p>
+        <p>She turned around, leaning her back against the sink and covering her face with her hands. "I have to go over there. I need to apologize to Carla for making a complete fool of myself at her party."</p>
+        <p>You really weren't that bad, Beck," Lisa said. "You just had a good time. Nobody is judging you for it."</p>
+        <p>"I'm judging me for it," Becky insisted, grabbing a pair of dark sunglasses off the counter and sliding them on to hide her bloodshot eyes.</p>
+        <p>"She was nice enough to invite us over and I acted like a frat boy. I'm going to go apologize right now before I lose my nerve."</p>
+        <p>Lisa didn't try to stop her. She just nodded, took a sip of her coffee, and watched as Becky walk out the back door.</p>
+        <p>Lisa moved to the kitchen sink, hiding behind the blinds as she watched her wife walk across the lawn.</p>
+        <p>Becky knocked on the front door.</p>
+        <p>A few seconds later, the door swung open.</p>
+        <p>Lisa was instantly wet seeing Carla smile. Carla stood in the doorway wearing loose sweatpants and a thin, worn-out t-shirt. Even from a distance, with messy hair and no makeup, she looked absolutely incredible Lisa thought.</p>
+        <p>Lisa watched Carla smile warmly at whatever Becky was saying. Carla didn't look annoyed or put out, instead, she stepped back, inviting Becky to come inside.</p>
+        <p>Becky walked in, and the door closed.</p>
+        <p>Lisa let out a long breath. She turned away from the window and sat on one of the barstools, resting her elbows on the island and looking back at her phone.</p>
+        <p>Her wife was currently sitting in the living room of the woman that had just fucked her hours earlier.</p>
+        <p>The reality of it was twisted. It was messy and dangerous, and sitting there in her kitchen, Lisa knew it should have made her feel guilty.</p>
+        <p>Instead, Lisa rubbed her hand down her face. Her leg starting to bounce anxiously.</p>
+        <p>All she could think about was Carla's hands on her hips, the soft sound of Carla's voice in her ear, and the intense, possessive look in those eyes right before Carla had fucked her.</p>
+        <p>Something had shifted with them last night and Lisa needed to se her again. She had to think of something.</p>
+    </div>
+
+    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">112</span> Kudos left on this work</p>
+        </div>
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+        <!-- Real Disqus Comment Section -->
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter15"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

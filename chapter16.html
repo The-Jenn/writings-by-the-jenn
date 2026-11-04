@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 16</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 16: More Time</h1>
+        
+        <p>Becky came through the back door a few minutes later, looking like she felt better but frantically patting the pockets of her sweatpants.</p>
+        <p>"Where's my phone? I swear I just..."</p>
+        <p>Lisa saw it sitting on the counter. She grabbed it and slid it across the island.</p>
+        <p>"Here." Lisa said.</p>
+        <p>Becky grabbed the phone. “Thanks”.</p>
+        <p>She dug into her pocket, pulled out a folded little piece of paper, and stared at it while she tapped a new contact into her screen.</p>
+        <p>"What ya doing?" Lisa asked.</p>
+        <p>"Oh, Carla gave me her number," Becky said , typing. "So I’m just texting her back mine. You know, in case anything happens or we need something or her."</p>
+        <p>I need her.</p>
+        <p>The thought slammed into Lisa's brain so fast it actually made her twitch.</p>
+        <p>She just stared at the piece of paper in her wife's hand.</p>
+        <p>"Ah, right," Lisa managed to say.</p>
+        <p>Becky looked up, catching the weird tone, and gave this little teasing smile. "We aren’t jealous, are we? Another woman giving me her number?"</p>
+        <p>Lisa laughed. A bitter feeling stuck in her throat. Jealous? Ha.</p>
+        <p>Not even a little bit. She didn't give a crap who Becky texted.</p>
+        <p>The only thing she was jealous of was the fact that Becky had her number.</p>
+        <p>"Nope. Not jealous," Lisa muttered, looking back down at her coffee.</p>
+        <p>Becky laughed.</p>
+        <p>Later that night, things got worse.</p>
+        <p>They were in bed. The lights were out. Becky had popped enough ibuprofen to kill the hangover, slept off the rest of it, and caught a second wind.</p>
+        <p>Lisa was lying on her back, staring at the ceiling, when she felt Becky slide closer. A hand drifted over Lisa’s stomach, fingers tracing the edge of her underwear.</p>
+        <p>Becky pressed a soft kiss against Lisa's shoulder.</p>
+        <p>Lisa’s entire body went completely rigid. It was an instant rejection. Her skin just... crawled.</p>
+        <p>"I can't," Lisa said. She grabbed Becky’s wrist to stop iy. "I've got a headache. And I gotta be up at four-thirty for shift."</p>
+        <p>Becky let out an annoyed sigh. She pulled her hand back. "Right. Okay. Night."</p>
+        <p>Becky rolled over, taking half the blankets with her, clearly pissed off. But she didn't push it.</p>
+        <p>Lisa just lay there in the dark. Wide awake.</p>
+        <p>She couldn't stop thinking about Carla. The exact way Carla had looked at her right before pulling her pants down.</p>
+        <p>Her fingers slipping inside her, fucking her on her bed until she completely lost her mind.</p>
+        <p>The memory made Lisa's chest ache. It was sick. It was totally messed up. She was lying right next to her wife, and all she felt was Carla’s hands.</p>
+        <p>Lisa closed her eyes. She didn’t want to touch Becky again. She wanted Carla.</p>
+        <p>——-</p>
+        <p>The next day Lisa sat in the front seat of her cruiser in an empty parking lot.</p>
+        <p>She pulled her phone out of her pocket and stared at the blank screen. She had gotten up early for her shift. Took Becky’s phone in to the bathroom and taken Carla’s number.</p>
+        <p>She typed quickly and hit send. Hey, it’s Lisa.</p>
+        <p>Across town, Carla was sitting at her desk, trying to work on her latest chapter.</p>
+        <p>Her phone lit up next to her. It was a number she didn't recognize.</p>
+        <p>She picked it up, reading the short message, and a slow smile spread across her face.</p>
+        <p>She had been secretly hoping Becky would mention her giving her the number, hoping Lisa might find a way to text her.</p>
+        <p>Well hello, Detective, Carla texted back.</p>
+        <p>She leaned back in her chair, smiling like a teenager.</p>
+        <p>They texted back and forth for a few minutes.</p>
+        <p>Lisa asked how she was and if she was busy. She admitted to took the number from Becky’s phone and wasn’t sure what she might do with it. The flirty text go to be too much for Lisa.</p>
+        <p>She needed more than a screen. She was going to take an extended lunch.</p>
+        <p>Meet me somewhere. I need to see you, Lisa typed.</p>
+        <p>Ok. Where? Carla replied instantly.</p>
+        <p>They agreed on small bar outside of town. Close to the precinct but Lisa didn’t think anyone she knew would be there. a place</p>
+        <p>Lisa was already sitting at the bar when Carla walked in.</p>
+        <p>Lisa watched her approach. Carla looked stunning, wearing a short, dark skirt that immediately made Lisa's mouth water.</p>
+        <p>Carla smiled, stepping directly into Lisa's space, and pressed a soft kiss to her cheek.</p>
+        <p>"Detective," Carla said as she sat down on the stool next to her.</p>
+        <p>Lisa immediately reached out, her hand resting on the inside of Carla’s thigh, she looked down at her legs briefly.</p>
+        <p>She caught the bartender's eye and asked for another round, ordering Carla a glass of red wine.</p>
+        <p>They just sat there for a moment, looking at each other. Suddenly, with the reality of being together in broad daylight, surrounded by strangers, neither of them knew exactly what to say.</p>
+        <p>"Thank you for meeting me," Lisa finally said, her voice nervous.</p>
+        <p>Carla smiled . She leaned forward, her hand coming up to rub Lisa’s forearm.</p>
+        <p>Lisa closed her eyes at the touch. She wanted Carla so badly it hurt.</p>
+        <p>She opened her eyes and flagged the bartender. "We're going to take the back booth."</p>
+        <p>Lisa nodded her head towards the back table to Carla.</p>
+        <p>They walked to the back corner of the bar and slid into the booth, sitting right next to each other on the same side.</p>
+        <p>Lisa looked down at Carla’s legs again. Her skirt riding up higher.</p>
+        <p>Carla looked at Lisa’s lips and didn't wait. She leaned in and kissed her.</p>
+        <p>Lisa kissed her back.</p>
+        <p>She reached down, sliding her hand along the inside of Carla's thigh.</p>
+        <p>The kissing got deeper. Under the table, completely hidden, Lisa pushed Carla’s underwear to the side and slowly slipped her fingers into Carla.</p>
+        <p>Lisa watched Carla as she swirled her finger over Carla’s clit, applying just enough pressure.</p>
+        <p>"Mmm... Lisa," Carla breathed.</p>
+        <p>"Carla, I can't stop thinking about you," Lisa whispered, moving her fingers, sliding in and out, then circling her thumb over her clit again.</p>
+        <p>Carla took a breath. "Me too, Lisa," she whispered into Lisa’s ear. "I need more time with you."</p>
+        <p>Carla leaned in even closer burying her face in Lisa's shoulder to hide exactly what they were doing from the rest of the room.</p>
+        <p>"Yeah, I want that too," Lisa said softly, pushing two fingers deep inside Carla.</p>
+        <p>Carla took another deep breath, her thighs parting a little wider beneath the table. "I have an event I'm going to," she whispered through breaths, riding Lisa's hand slowly. "For writers. 3 days in Praia de Porto Santo Portugal, It's a workshop and meet and greet type thing..vacation. Whatever I want it to be... Come with me?" Carla whispered as she enjoyed Lisa’s fingers.</p>
+        <p>Lisa’s hand instantly slowed.</p>
+        <p>She looked at Carla, her mind suddenly racing.</p>
+        <p>It was completely crazy. Running off to an event out of town? How the hell was she going to pack a bag, leave the house for days, and actually get away with it without Becky finding out?</p>
+        <p>“I… I’m not sure I can…” Lisa whispered looking at Carla. “Just think about it Lisa.”</p>
+        <p>Carla kissed her again and then slowly closed her legs. Letting Lisa know they needed to stop. Carla took a sip of her wine.</p>
+        <p>“You need to get back to work no doubt. I have to get back to writing.” Carla stood up and bent down and slowly kissed Lisa one more time. She held her face and looked at her before turning around and walking out.</p>
+        <p>Lisa watched her walk away.</p>
+        <p>———</p>
+        <p>Lisa walked through the front door just after midnight. The house was quiet, the only light coming from the small lamp Becky always left on for her in the living room.</p>
+        <p>Lisa took off her badge and gun. Her heart racing.</p>
+        <p>The entire drive home, she had been rehearsing exactly what she was going to say, bracing herself for an argument, for tears, or for a bunch of questions she wouldn't be able to answer.</p>
+        <p>She walked into the living room. Becky was curled up on the couch under a soft blanket, reading a book.</p>
+        <p>She looked up and smiled sleepily as Lisa walked in.</p>
+        <p>"Hey, babe," Becky murmured, marking her page and setting the book aside. "Long shift?"</p>
+        <p>"Yeah," Lisa said. She stayed standing, her hands shoved deep into her pockets so Becky wouldn't see them shaking.</p>
+        <p>She swallowed hard, forcing the lie to come out. "Listen... I got pulled into the Captain's office before I left. I have to fly out of town this weekend."</p>
+        <p>Becky blinked, sitting up a little straighter. "Out of town? Why?"</p>
+        <p>"I have to testify," Lisa said, keeping her voice calm.</p>
+        <p>"It's an old case that resurfaced. A federal thing they bumped to a different district. They need me there as an expert witness."</p>
+        <p>Lisa braced herself. She waited for the pushback, for Becky to complain about her working on her weekend off, or to demand to know where she was going and who she was going with.</p>
+        <p>Instead, Becky just let out a sympathetic sigh. "Oh, babe. That sucks. You were supposed to have this weekend to just relax."</p>
+        <p>Lisa stood there, completely stunned.</p>
+        <p>"You're... you're not mad?"</p>
+        <p>"Why would I be mad at you?" Becky asked gently, getting off the couch and walking over. She wrapped her arms around Lisa's waist, resting her chin on Lisa's chest. "It's your job. I know you can't talk about the details. How long are you going to be gone?"</p>
+        <p>"Just three days," Lisa whispered. She felt physically sick. Becky's trust was suffocating.</p>
+        <p>"Okay," Becky said softly, kissing Lisa's cheek. "I'll help you pack tomorrow. You go take a shower and decompress, okay?"</p>
+        <p>"Okay," Lisa managed to say.</p>
+        <p>Becky smiled and walked toward the stairs. Lisa stood alone in the living room for a second staring at the wall.</p>
+        <p>It was too easy.</p>
+        <p>The lie had slipped out so easy.</p>
+        <p>She couldn't believe she was doing this, looking her wife right in the eyes and completely betraying her.</p>
+        <p>But as the feeling came, a different feeling immediately followed.</p>
+        <p>Three days.</p>
+        <p>Three entire days in a hotel room with Carla, with no looking over her shoulder, no hiding, and no rules.</p>
+        <p>Lisa closed her eyes and took a deep breath. She headed upstairs to Take a shower.</p>
+        <p>——</p>
+        <p>The week just dragged</p>
+        <p>Lisa packed her duffel bag, throwing in jeans and shirts while Becky stood in the doorway asking if she needed help.</p>
+        <p>It was so messed up.</p>
+        <p>Lisa felt like she was gonna throw up the whole time, just nodding and zipping the bag.</p>
+        <p>She told Becky she had to drive herself, she said the precinct was covering airport parking and a drop-off would just complicate the voucher system.</p>
+        <p>Which was complete garbage, obviously, but Becky didn't even blink.</p>
+        <p>Carla had left for the airport a couple hours early.</p>
+        <p>Lisa got there closer to boarding. She parked in the long term lot, riding the shuttle, her legs shaking the entire time. Freaking out.</p>
+        <p>She grabbed her bag, practically sprinting through TSA, because what if someone saw her?</p>
+        <p>But... no. Nobody was watching.</p>
+        <p>She walked down the terminal to Gate B14.</p>
+        <p>And there she was.</p>
+        <p>Carla was sitting in waiting area At gate looking out the window at the tarmac.</p>
+        <p>Dark jeans, a loose shirt, sunglasses pushed up on her head.</p>
+        <p>Lisa’s stomach got nervous.</p>
+        <p>Lisa walked over. Dropped her bag on a chair.</p>
+        <p>"Hey," Lisa said, a little out of breath.</p>
+        <p>Carla looked up. That smirk. "You made it, Detective."</p>
+        <p>"Yeah. Barely." Lisa sat down in the empty seat next to her. Their knees touched. Neither of them moved away.</p>
+        <p>They had forty minutes until boarding.</p>
+        <p>They just sat there and started talking.</p>
+        <p>Not about the affair or Becky or the insane risk they were taking. Just... talking.</p>
+        <p>"So where'd you even grow up?" Lisa asked, staring at Carla’s hands.</p>
+        <p>"London area. Real quiet small place," Carla said, leaning back and crossing her arms.</p>
+        <p>"My mom... she was pretty strict. I was always writing, always making up stories to get outta doing chores or just dealing with reality. So good job it’s what I do for a living, What about you? Were you always... I don't know, a rule follower?"</p>
+        <p>Lisa laughed softly.</p>
+        <p>"I wasn't a rule follower. I just... I liked structure," Lisa said. "Grew up with three older brothers who basically wrecked everything they touched, so I guess I just decided I was gonna be the one who fixed things. Put things in order."</p>
+        <p>"And look how well that's going for you right now," Carla said, sipping her drink.</p>
+        <p>Lisa smiled shyly are her. It was so easy. Just sitting here, talking about stupid childhood crap, pretending they were just two normal people taking a trip together.</p>
+        <p>But then Carla’s hand slipped off the armrest. Her fingers touched the side of Lisa’s leg. Just a tiny touch. Lisa forgetting every single thing she was gonna say next.</p>
+        <p>They boarded quickly. Carla had made absolutely sure they were booked in first class. She bought both tickets.</p>
+        <p>It was only a four-hour flight, but she wanted the extra room and the privacy.</p>
+        <p>Once they hit cruising altitude and the seatbelt sign turned off, Carla flagged down the flight attendant and ordered them a couple of neat bourbons.</p>
+        <p>They drank them slowly. They both were nervous of the three days they would have together and what that meant.</p>
+        <p>Leaning toward each other, sitting closely, they just talked. Carla told Lisa all about her first book, the one that had finally made her hit it big. Lisa listened, mesmerized by her passion, and found herself opening up in return.</p>
+        <p>She talked about the academy, the pressure of proving herself, and how it felt to finally pin on the badge and become a cop.</p>
+        <p>The conversation came so easily, but the amount of pure lust was distracting to both of them.</p>
+        <p>By hour two of the flight, the cabin lights dimmed as most of the passengers settled in to rest or watch movies.</p>
+        <p>Carla was feeling good, she was two bourbons in. She shifted in her seat, leaning into Lisa's space.</p>
+        <p>Carla turned her head, letting her tongue slowly lick Lisa's ear. Lisa froze.</p>
+        <p>"Fuck me in the restroom Lisa?" Carla whispered against her ear.</p>
+        <p>Carla didn't wait for an answer. She unbuckled her seatbelt, stood up and walked down the isle toward the front restroom.</p>
+        <p>Lisa waited a few seconds, watching the flight attendants disappear behind the curtain.</p>
+        <p>Lisa got up and followed.</p>
+        <p>She reached the restroom, pulled the folding door open, and slid into the small space with Carla, immediately locking the door behind her.</p>
+        <p>They were instantly face to face. Carla grabbed Lisa's shirt and kissed hard. Carla reached down, grabbing Lisa’s hand and shoving it directly down.</p>
+        <p>"Fuck me, Detective," Carla whispered.</p>
+        <p>Lisa didn’t waste a second. She unbuttoned her jeans and went in Carla's underwear and pushed in deep, fucking the hell out of her right there in the tiny bathroom.</p>
+        <p>Carla let out a moan, burying her face in the side of Lisa's neck to muffle it.</p>
+        <p>The space was tight, forcing them against each other.</p>
+        <p>Carla lifted one leg up, and Lisa immediately adjusted, hooking her arm under Carla's thigh and picking her up just a little so she could lean back into the sink.</p>
+        <p>The angle was perfect. Lisa pushed her fingers deep inside of her.</p>
+        <p>"Lisa...yes," Carla moaned against her skin. "Fuck... fuck me."</p>
+        <p>Just hearing Carla say those words made Lisa push harder and faster.</p>
+        <p>They could only hear the jet engines running under their feet and the wet noises coming from Carla as Lisa fucked her harder.</p>
+        <p>"I'm coming," Carla moaned, pulling Lisa's face up and kissing her hard.</p>
+        <p>Lisa kissed her harder, tasting her cries as Carla let go.</p>
+        <p>Her muscles clamped down incredibly tight around Lisa's fingers.</p>
+        <p>She pushed harder. Not wanting to stop yet.</p>
+        <p>Carla breathed heavy in Lisa’s neck.</p>
+        <p>“Lisa..” Carla said</p>
+        <p>Carla wrapped her arms around Lisa’s neck, holding on as her body shook through the climax.</p>
+        <p>Still muffled against Lisa's lips, Carla breathed, "Fuck, that was incredible."</p>
+        <p>They stayed pressed together against the sink for a long minute. Collecting themselves.</p>
+        <p>The rest of the flight was a surreal high. They cleaned themselves up and went back to their seats one at a time so no one would notice.</p>
+        <p>When Lisa finally got back into her seat, she couldn’t believe she just did that.</p>
+        <p>Carla looked over at her, a satisfied smile on her lips. Without saying a word, Carla reached across the armrest, taking Lisa's hand and pulling it underneath the airline blanket.</p>
+        <p>They didn't talk much for the last two hours of the flight. They just sat there holding hands, drinking the rest of their bourbon. Lisa stared at the seat in front of her, completely consumed by the realization that if they were already doing this at thirty thousand feet, this weekend was going to ruin her in the best way possible.</p>
+        <p>She knew the time was coming. And she wasn’t going to let Becky manipulate her anymore.</p>
+    </div>
+
+    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">121</span> Kudos left on this work</p>
+        </div>
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+        <!-- Real Disqus Comment Section -->
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter16"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

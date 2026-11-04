@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 10</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 10: The Morning After</h1>
+        
+        <p>Lisa woke up slowly. Her body felt heavy, her muscles aching with a deep, soreness that she hadn’t felt in years.</p>
+        <p>For a few blissful, disoriented seconds, she was just warm. She inhaled, her senses filled with the smell of Carla’s scent.</p>
+        <p>Then, her eyes open, and the absolute reality of what she had done crashed down on her.</p>
+        <p>She wasn't in her house. She was lying in Carla’s bed.</p>
+        <p>Carla was asleep beside her, lying on her stomach with her face turned toward Lisa. The white sheets were tangled around her waist, leaving her back exposed.</p>
+        <p>The dark, messy strands of Carla's hair fell across her face, and in the morning light, she looked incredibly soft. The arrogant edge was entirely gone.</p>
+        <p>Lisa stared at her, her heart beating fast.</p>
+        <p>Bzzzz. Bzzzz.</p>
+        <p>The sudden vibration of a cell phone against the wooden nightstand made Lisa jump. She turned over quickly. It was her phone. The screen was lit up.</p>
+        <p>Incoming Call: Becky</p>
+        <p>Lisa’s stomach dropped. A cold, nauseating sweat broke out across the back of her neck.</p>
+        <p>Her hands actually shook as she reached for the phone. If she didn't answer, Becky would panic.</p>
+        <p>If she let it go to voicemail, Becky would call the precinct to check on her.</p>
+        <p>Lisa cleared her throat, swallowed hard, and swiped the green button.</p>
+        <p>She pressed the phone to her ear, sitting up slightly and pulling the sheet over her chest.</p>
+        <p>"Hello?" Lisa croaked. Her voice sounded rough, ruined from the night before.</p>
+        <p>"Hey, babe! Did I wake you up?" Becky’s voice, bright, loud, and cheerful. Background noise, girls laughing, the squeak of sneakers on a gymnasium floor, echoed behind her.</p>
+        <p>"Uh. Yeah," Lisa managed to say, squeezing her eyes shut. She pinched the bridge of her nose. "Yeah, I was just sleeping. Just a little tired."</p>
+        <p>"I knew it. You always overwork yourself when we aren't there," Becky scolded gently, the affection in her voice making Lisa feel like she was suffocating.</p>
+        <p>"How was the storm? The news said we got hit pretty hard. Did you lose power?"</p>
+        <p>Lisa opened her eyes.</p>
+        <p>Carla was awake.</p>
+        <p>Carla had rolled onto her side and was propped up on one elbow, the white sheet around her hips.</p>
+        <p>She was staring directly at Lisa.</p>
+        <p>She didn't look angry. She just looked incredibly sad, watching the detective slip the mask back on.</p>
+        <p>"Yeah," Lisa lied, "The power went out around eight. It was completely dark. I just... I just went to bed early."</p>
+        <p>Carla reached out.</p>
+        <p>Lisa completely froze as Carla’s fingertips lightly traced the line of Lisa’s collarbone.</p>
+        <p>Carla’s eyes never left Lisa’s face, silently challenging her, reminding her of exactly what happened last night.</p>
+        <p>Lisa gripped the phone tighter. She desperately wanted to pull away, to hide from the reality of the two worlds colliding in this bed, but she couldn't move.</p>
+        <p>She was completely paralyzed.</p>
+        <p>"Well, the power company said it should be back on by noon," Becky continued, entirely oblivious to the fact that her marriage was actively crashing. "Betsy played great this morning! They won their first bracket. She wanted to say hi, but the coach is talking to them right now."</p>
+        <p>"That's... tell her I'm proud of her," Lisa said. She sounded like a robot. Her throat was so dry it burned.</p>
+        <p>Carla’s hand moved down, her warm palm resting flat against the bare skin of Lisa’s stomach. Lisa coughed.</p>
+        <p>"Lisa? You okay?" Becky asked, the cheerful tone dropping just a fraction. "You sound weird. Are you getting sick?"</p>
+        <p>"No," Lisa said quickly, her heart beating frantically. She grabbed Carla’s wrist, stopping her hand from moving any lower, but she didn't push Carla away.</p>
+        <p>She just held onto her, her thumb pressing into Carla's wrist. "No, I'm fine, Bec. My throat is just a little dry. Need some water."</p>
+        <p>"Okay, well, go get a drink. I know you have a shift later. I just wanted to check in. I miss you."</p>
+        <p>The words hung in the air. I miss you.</p>
+        <p>Lisa looked at Carla. Carla was watching her, waiting for the response. The silence stretched for three agonizing seconds.</p>
+        <p>"I miss you, too," Lisa lied.</p>
+        <p>"Okay, I gotta run. Love you, babe!"</p>
+        <p>"Love you."</p>
+        <p>Lisa pulled the phone away from her ear and hit the red button. The screen went dark.</p>
+        <p>The silence that followed was strange.</p>
+        <p>The gymnasium noise, the cheerful voice of her wife, it was all gone, leaving nothing but the heavy breathing of the two women in the bed.</p>
+        <p>Lisa sat up, slowly lowered the phone, resting her forehead against her knees. She felt sick. She felt completely pathetic.</p>
+        <p>Carla didn't say a word. She gently tried to pull her wrist out of Lisa's grip.</p>
+        <p>But Lisa didn't let go.</p>
+        <p>Instead, Lisa’s grip tightened. Carla blinked, startled, as Lisa yanked her arm, pulling Carla violently across the bed until her body was next to Lisa's.</p>
+        <p>Before Carla could even process the sudden shift, Lisa was moving. She threw her cell phone blindly across the room, it hit the hardwood floor. And swinging her leg over Carla’s hips to straddle her.</p>
+        <p>Lisa used her weight to press Carla deep into the mattress, catching both of Carla's wrists and pinning them to the pillows above her head.</p>
+        <p>"Lisa" Carla gasped, completely caught off guard by the sudden, overwhelming dominance.</p>
+        <p>"I just lied to my wife," Lisa said. Her voice wasn't filled with guilt anymore, it was dark, rough, and dangerous. The adrenaline from the phone call hadn't made her stop, it had completely snapped the last remaining thread of her conscience. "I just sat here, in your bed, and lied right to her."</p>
+        <p>Carla held her breath. The arrogant writer was completely paralyzed, staring up into the eyes of a woman who had just decided to burn her entire life down.</p>
+        <p>"You did," Carla managed to whisper.</p>
+        <p>"Because of you," Lisa said, leaning down until her lips were hovering above Carla's. "You dragged me all the way over the line, Carla.."</p>
+        <p>Lisa didn't wait for a response. She kissed Carla with aggression.</p>
+        <p>It was consuming. Carla let out a muffled moan into Lisa’s mouth, lifting her back off the mattress to press herself closer.</p>
+        <p>Lisa broke the kiss. Then kissed down Carla's throat, finding the exact spot she had bruised the night before and biting down just hard enough to make Carla squirm beneath her.</p>
+        <p>Lisa didn't stop there. She released Carla’s wrists, letting her hands slide down Carla’s arms. She shifted her weight, moving lower down the mattress, her lips kissing down the center of her chest.</p>
+        <p>Carla’s hands instantly went in Lisa’s messy hair, her fingers gripping tightly.</p>
+        <p>"Lisa," Carla pleaded.</p>
+        <p>Lisa ignored the plea. She kissed across the muscles of Carla's stomach, her hands sliding down to firmly grip the curve of Carla's hips.</p>
+        <p>"You wanted to see me break the rules," Lisa murmured against Carla's skin, her voice a low, Carla’s toes curled. "You haven't even seen the half of it."</p>
+        <p>Carla let out a breathless sound, her head falling back against the pillows. Lisa took her clit in to her mouth once again, but this time she moved slower. Tasting every inch of Carla. Carla’s eyes rolled in the back of her head.</p>
+        <p>It felt like Carla was on some kind of drug. It made her entire body forget who and what it was. Lisa did not disappoint she thought. She would want more. And she was going to get it.</p>
+        <p>——-</p>
+        <p>Lisa didn’t stay to cuddle. She fucked Carla again long and hard and didn’t even know what to say to her after.</p>
+        <p>She pulled her jeans up over her hips, her hands shaking slightly as she fastened the button.</p>
+        <p>She grabbed her wrinkled gray t-shirt from the floor and pulled it over her head.</p>
+        <p>Carla didn't try to stop her. Carla was sprawled out across the messy white sheets, watching.</p>
+        <p>She was satisfied. She knew Lisa was struggling inside. She didn’t want to make it worse by tying to start an awkward conversation.</p>
+        <p>"I have to go check the house," Lisa said, not meeting her eyes. "Make sure the power surge didn't short the fridge."</p>
+        <p>It was a pathetic excuse, and they both knew it.</p>
+        <p>"Okay," Carla said softly. She didn't sound disappointed.</p>
+        <p>Lisa walked over to her and stopped. She bent down and kissed her cheek. Not knowing what to do. She walked out the back door, the humid Sunday air hitting her.</p>
+        <p>She crossed the yard, unlocked her own back door, and stepped in.</p>
+        <p>Lisa stood frozen in the kitchen. Everywhere she looked, there was evidence of the life she had just betrayed.</p>
+        <p>A pair of Betsy’s muddy soccer cleats were kicked off by the door.</p>
+        <p>A stack of mail with Becky’s handwriting on a sticky note sat on the counter.</p>
+        <p>A framed family photo from their trip to the beach last summer stared directly at her from the living room mantle.</p>
+        <p>Lisa felt sick. She walked to the sink, turned the cold water on, and splashed it onto her face.</p>
+        <p>She braced her hands against the edge of the sink, water dripping from her chin.</p>
+        <p>She closed her eyes, trying to feel the guilt that a good person was supposed to feel.</p>
+        <p>She tried to picture Becky’s face. She tried to think about her vows.</p>
+        <p>But her body wouldn't cooperate.</p>
+        <p>Her skin had chill bumps. Her thighs ached. Her mouth still tasted like Carla. Every time she closed her eyes, she didn't see her wife, she saw Carla riding her, moaning her name.</p>
+        <p>Lisa walked away from the sink and started pacing.</p>
+        <p>She walked into the living room, then back into the kitchen. The quiet house was suffocating her, pressing in on her from all sides.</p>
+        <p>She went to the counter and poured a bourbon, and sat down at the kitchen table.</p>
+        <p>She stared down at her glass. Her leg bounced frantically under the table.</p>
+        <p>She wanted to go back.</p>
+        <p>The urge was bad and so strong it actually terrified her.</p>
+        <p>She was sitting in the middle of her beautiful life, and all she wanted to do was walk right back out the door, cross the grass, and crawl back into Carla’s bed.</p>
+        <p>You can't, she told herself firmly, her hands wrapping tightly around the glass. You're done. It happened.</p>
+        <p>It's over. You have to lock this down right now. She thought.</p>
+        <p>She sat there for an hour, fighting a brutal, silent war in her own head. She kept her eyes glued to the table, refusing to look out the window.</p>
+        <p>But eventually, the silence broke her.</p>
+        <p>Lisa slowly turned her head and looked out the kitchen window, through the blinds, across the yard.</p>
+        <p>Carla was outside.</p>
+        <p>Carla had walked out on her back patio. She was wearing a thin silk robe tied loosely around her waist. She was sitting in a lounge chair, her bare legs stretched out in the sun, holding a mug of coffee.</p>
+        <p>Lisa stared at her. Remembering every inch of her body, And then, as if she could feel the weight of the Lisa’s stare, Carla turned her head. She looked directly at Lisa’s kitchen window.</p>
+        <p>Lisa continued to stare. Carla turned her head back and laid out straight on the chair.</p>
+        <p>She smiled.</p>
+        <p>Lisa knew she would probably end up back over there at some point today…no matter how hard she fought it.</p>
+        <p>———</p>
+        <p>A little later that night Carla sat at her desk. She couldn’t believe what had just happened with her and Lisa. She opened her laptop and stared at her story for a bit.</p>
+        <p>She wasn’t sure where to start.</p>
+        <p>:::::::Erin stepped directly into Beth’s space. She pushed the detective on to the bed. Erin pinned Beth's wrists above her head, she wanted to control the detective. Beth laid there entirely at her mercy, and Erin smiled at the thrill of the control. She ripped her pants off and forced her legs open. She slowly devoured Beth. Enjoying every inch of her:::::::</p>
+        <p>Carla stopped typing. She stared at the blinking cursor, she was so turned on. The gears in her head were turning.</p>
+        <p>She realized how desperately she wanted to fuck Lisa. To take control.</p>
+        <p>She wanted to push Lisa down. She wanted to taste her.</p>
+        <p>Carla shut the laptop shut. She walked into her bedroom and put on clothes. Loose linen pants and a white tank top. No bra. You could see her nipples a little.</p>
+        <p>She walked into the kitchen, grabbed her best bottle of expensive bourbon and two rocks glasses, and headed out the back door.</p>
+        <p>The night was pitch black and incredibly humid. Carla walked across the grass, pushing through the gate that separated their properties.</p>
+        <p>She heard Lisa’s music. She was sitting on the patio.</p>
+        <p>As the gate opened, Lisa’s looked up. Her heart completely stopped in her chest.</p>
+        <p>Carla looked incredible. Her hair messy but sexy, and the white tank top clung perfectly to her body.</p>
+        <p>"Detective," Carla said, "Nice night."</p>
+        <p>Lisa just watched her, completely paralyzed.</p>
+        <p>Carla walked up to Lisa. Close. She twisted the top off the bourbon and poured a large amount into Lisa's glass.</p>
+        <p>Lisa looked up at her not saying a single word.</p>
+        <p>Carla smiled softly, poured a glass for herself, and sat down in the chair directly in front of Lisa.</p>
+        <p>They sat there listening to the music and drinking the whiskey.</p>
+        <p>The alcohol slowly began to do its job. Lisa’s posture started to loosen.</p>
+        <p>Her eyes kept dropping to Carla’s chest, to her lips, she just watched her.</p>
+        <p>Lisa wanted her again. It was excruciating, she felt guilty this was her house. This was her patio. This was the house she shared with Becky.</p>
+        <p>The reality of her life was everywhere. Her head was back and forth.</p>
+        <p>Carla knew exactly what she was doing.</p>
+        <p>She could see Lisa struggling internally.</p>
+        <p>She knew Lisa would break again. When Lisa didn't do anything, Carla took matters into her own hands.</p>
+        <p>She slowly leaned forward, her eyes locking onto Lisa's.</p>
+        <p>Carla reached out and gently took the heavy glass of bourbon right out of Lisa’s hand, setting it on the table.</p>
+        <p>Without breaking eye contact, Carla smoothly climbed onto the chair and straddled Lisa’s lap.</p>
+        <p>Lisa let out a nervous breath, her hands ins wrapping tightly around Carla’s waist.</p>
+        <p>"I want you again so fucking bad," Carla whispered, her breath against Lisa's ear.</p>
+        <p>Carla grabbed both sides of Lisa’s face, pulling her in, and kissed her hard.</p>
+        <p>It was a sexy hard kiss. Lisa immediately gripped Carla’s hips tight, her fingers digging into the linen fabric.</p>
+        <p>Carla began to rock her hips slowly against Lisa's lap, completely starved for her.</p>
+        <p>Lisa’s hands grabbed Carla's back, her mind racing in a hundred different directions.</p>
+        <p>She wanted to throw Carla down right there, but the guilt over took her.</p>
+        <p>Lisa pulled her mouth away, and slowly pushed Carla back just an inch.</p>
+        <p>She stared up at Carla, her eyes tortured.</p>
+        <p>"What are we doing here?" Lisa whispered.</p>
+        <p>"Whatever you want, Lisa," Carla answered.</p>
+        <p>"I want you," Lisa whispered back, her grip on Carla's hips getting tighter.</p>
+        <p>"I want you too," Carla said, staring her right in the eyes.</p>
+        <p>"But I can't here..." Lisa said.</p>
+        <p>Carla’s looked at her. A little sadness in her eyes. The reality of it killing it.</p>
+        <p>She slowly slid off Lisa's lap and stood up, fixing herself.</p>
+        <p>"I understand," Carla said. "Maybe I shouldn't have come over. I'm making things difficult for you. And for that, I am sorry."</p>
+        <p>Carla turned her back on Lisa and started walking away, heading back toward the dark bushes and gate.</p>
+        <p>Something inside Lisa completely snapped.</p>
+        <p>Lisa stood up, knocking her chair backward. She ran up behind Carla , grabbing her arm. Lisa spun her around, shoving Carla forcefully against the gate.</p>
+        <p>Carla went to say something , but Lisa stopped her, pushing her mouth onto Carla's.</p>
+        <p>Carla moaned into the kiss, her hands grabbing Lisa.</p>
+        <p>Lisa didn't hesitate. She dropped to her knees, her hands gripping the waistband of Carla's linen pants and shoving them down her thighs.</p>
+        <p>Once again, Lisa tasted Carla. She moaned. She needed it. She wrapped her hands around Carla’s ass, squeezing hard, pulling Carla harder against her mouth as she buried her face in her</p>
+        <p>“Lisa…” Carla moaned, her head back against the gate. Her fingers dug into Lisa’s shoulders.</p>
+        <p>"I want you so bad, I want to.."</p>
+        <p>Lisa didn't let her finish. She used moved tongue faster, entirely focused on making Carla completely lose control.</p>
+        <p>"Oh God, Lisa," Carla sobbed.</p>
+        <p>Her knees buckled slightly, the only thing keeping her upright was Lisa's grip holding her in place.</p>
+        <p>"Fuck," Carla whispered . Her hand grabbing her shoulders harder. Slumping down the gate a little. Lisa shoved her fingers in her pushing hard. “Fuck Lisa.”</p>
+        <p>She came hard.</p>
+        <p>Lisa smiled against her skin, and she pushed harder.</p>
+        <p>"Lisa," Carla whispered needing her to stop but not wanting her too.</p>
+        <p>Lisa finally slowed down. She looked up at Lisa. Her head against the gate. Staring down at her. She stood up slowly, wiping her mouth. They stared at each other.</p>
+        <p>Carla kissed her, her entire body trembling against Lisa's.</p>
+        <p>Carla's mind was racing. The adrenaline from the orgasm made her brave. She wanted to fuck Lisa so badly.</p>
+        <p>She wasn't entirely sure she would be any good at it.</p>
+        <p>"Lisa, please," Carla said against her lips, her hands sliding down Lisa's chest. "Come back to mine?"</p>
+        <p>Lisa completely froze.</p>
+        <p>The kiss stopped. Lisa stepped back.</p>
+        <p>"I don't think that's a good idea," Lisa said, avoiding Carla's eyes.</p>
+        <p>She looked out into the dark yard. "I have to be up early for work. And Becky..." Lisa's voice trailed off. She looked down at the ground.</p>
+        <p>"Oh right," Carla said. "She's home tomorrow."</p>
+        <p>Lisa looked back up at her. Her eyes said everything she couldn't say aloud.</p>
+        <p>She was incredibly sorry, she was completely torn in half, but there was absolutely nothing she could, or would, do about it.</p>
+        <p>The wall was back up.</p>
+        <p>"Well, Detective," Carla said. Her voice was flat, trying desperately to mask the hurt in her heart.</p>
+        <p>She pulled her arm out of Lisa’s grip, adjusted her clothes, and stepped backward. "I'll leave you to it."</p>
+        <p>Carla turned slowly, pushing through the gate. She didn't look back as she walked across her yard.</p>
+        <p>What was she thinking? Carla thought, walking into her empty house and locking the door behind her. She poured herself another bourbon, her hand shaking.</p>
+        <p>She stood there. What in the actual fuck was she doing?</p>
+        <p>They stayed there in the quiet guest room as the sun started to go down, just laying in bed and making out.</p>
+    </div>
+
+    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">61</span> Kudos left on this work</p>
+        </div>
+
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+
+        <!-- Real Disqus Comment Section -->
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter10"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

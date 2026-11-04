@@ -20,13 +20,14 @@
         .container { max-width: 800px; margin: 40px auto; padding: 20px 40px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
         .header-divider { text-align: center; margin: 20px 0; color: #8c9360; }
         
-        /* Updated to fit your Tumblr embed without clipping it */
         .cover-image { width: 100%; max-width: 540px; margin: 0 auto 30px auto; display: block; text-align: center; }
         
         ul.chapter-list { list-style: none; padding: 0; }
         ul.chapter-list li { padding: 10px; border-bottom: 1px solid #d1d5c5; display: flex; justify-content: space-between; }
         ul.chapter-list li a { color: #4b5320; text-decoration: none; font-weight: bold; }
         ul.chapter-list li a:hover { text-decoration: underline; }
+        
+        .comment-area { margin-top: 40px; padding-top: 30px; border-top: 1px dashed #d1d5c5; }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -35,7 +36,7 @@
         <div class="header-divider">◈ ◈ ◈</div>
         <p style="text-align: center; font-style: italic;">Welcome to my official writing archive. All original works and fanfiction are protected.</p>
         
-        <!-- Tumblr Embed -->
+        <!-- Tumblr Embed Image -->
         <div class="cover-image">
             <div class="tumblr-post" data-href="https://embed.tumblr.com/embed/post/t:yp6_gir4p4kHVvJQ6ax4Tg/832320749898498048/v2" data-did="3fe653fbb1d592cd241ef191ebb8d517d5782e3e"><a href="https://www.tumblr.com/the-jenn/832320749898498048/working-in-a-new-website-for-my-fics">https://www.tumblr.com/the-jenn/832320749898498048/working-in-a-new-website-for-my-fics</a></div><script async src="https://assets.tumblr.com/post.js?_v=2e3257777411face7e6785c8941f968f"></script>
         </div>
@@ -69,7 +70,27 @@
             <li><a href="chapter25.html">Chapter 25 - The Realization</a></li>
             <li><a href="chapter26.html">Chapter 26 - Betrayal</a></li>
         </ul>
+
+        <!-- Real Disqus Comment Section for Homepage -->
+        <div class="comment-area">
+            <h3>Guestbook & General Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "homepage"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
     </div>
+
     <script>
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }

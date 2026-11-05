@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 22</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 22: The Kitchen Window</h1>
+        
+        <p>Lisa pulled into the back lot of the precinct and parked.</p>
+        <p>She pulled her phone out of her pocket and stared at the screen. Her hands were shaking.</p>
+        <p>She was furious, she was terrified, and she felt trapped. She opened Carla's contact and hit dial, pressing the phone to her ear while she watched a pair of patrol officers walk across the lot.</p>
+        <p>It rang twice.</p>
+        <p>"Lisa?" Carla answered. Her voice was quiet.</p>
+        <p>"She saw it," Lisa said. No greeting, no how are you. "Becky saw the article."</p>
+        <p>Carla was quiet then asked. "What article?"</p>
+        <p>"The magazine," Lisa said. "Some entertainment magazine she picked up at the grocery store. There’s a whole page in there about Sloane in Portugal. With a mysterious woman."</p>
+        <p>Lisa heard Carla shift. "Lisa, I didn't.." Carla said.</p>
+        <p>"There's a photo, Carla," Lisa interrupted. "In your robe. I’m guessing when those girls came to our door. I was standing behind you."</p>
+        <p>Carla let out a loud breath. "Shit. My publicist just left a voicemail three minutes ago telling me to look up the new issue. I haven't even opened my laptop yet. I didn't know."</p>
+        <p>"Becky was looking at it this morning," Lisa said.</p>
+        <p>She pressed her hand against her forehead, closing her eyes. "She was laughing. She thought it was hilarious. She was sitting there joking about her quiet neighbor writing a new book and secretly sneaking women into a hotel room."</p>
+        <p>"Did she recognize you?" Carla asked.</p>
+        <p>"No," Lisa said. "But I knew it was me. I was standing right there staring at it while she was making jokes."</p>
+        <p>Lisa let her head fall back against her seat.</p>
+        <p>"I was going to do it today, Carla," Lisa whispered.</p>
+        <p>"Do what?" Carla asked.</p>
+        <p>"Tell her," Lisa said. "I didn't sleep a single minute last night. I was in bed and figured out exactly what I was going to say. I walked down the stairs this morning fully intending to tell her I was leaving."</p>
+        <p>Carla didn't speak. She just listened.</p>
+        <p>"And then I walked in," Lisa continued, her eyes burning, "and she pushed that magazine right at me and I panicked."</p>
+        <p>"So you left without talking to her," Carla said softly.</p>
+        <p>"Yea," Lisa admitted. "I made up a stupid excuse about needing to beat the morning traffic and I walked out the door. But I’m going out of my mind sitting in this car. I'm so angry that this is happening, and I'm terrified she’s going to look at that picture again and figure it out."</p>
+        <p>"She won't," Carla said, trying to calm her. "If it's just hair and a shoulder, it could be anybody. People see what they expect to see, Lisa. She expects you to be a cop who went to a courthouse. She doesn't expect you to be in Portugal."</p>
+        <p>"I need to see you." Lisa said interrupting.</p>
+        <p>The words rushed out of her before she could think. "I can't do this over the phone. And I can't wait days to talk to you about this."</p>
+        <p>Carla let out a breath. "Okay. When?"</p>
+        <p>"Tomorrow," Lisa said.</p>
+        <p>Carla was quiet for a second. "You want me to come over there?"</p>
+        <p>"No, I'll come to you, Becky will be chaperoning a dance. At Betsy’s school." Lisa said.</p>
+        <p>"Okay," Carla said. "Six o'clock."</p>
+        <p>"I'll be there," Lisa said.</p>
+        <p>Lisa lowered the phone, the screen going dark in her lap. She sat in the running car for another five minutes, listening to the engine and forcing her heart to slow down, before she finally turned the key, grabbed her gear, and walked into the station.</p>
+        <p>——-</p>
+        <p>Lisa stood near the bottom of the stairs, her hands shoved into the front pockets of her jeans. She was trying to keep her breathing steady, watching the clock tick away the minutes.</p>
+        <p>Upstairs, doors were opening and shutting, followed by the sound of footsteps.</p>
+        <p>A moment later, Betsy came down the stairs. She was wearing a blue dress, her hair pinned up carefully with silver clips, and a pair of heels that made her taller.</p>
+        <p>"Look at you," Lisa said, pulling her hands out of her pockets. She stepped forward and pulled the teenager into a quick hug. "You look incredible, kid. Are you sure you don't have a date meeting you there? I might need to interrogate somebody."</p>
+        <p>Betsy rolled her eyes, but she was smiling and blushed. "No, mom. It's just a group of friends going."</p>
+        <p>"Alright, alright," Lisa laughed.</p>
+        <p>"Okay, stop moving, stand right there!" Becky hurried down the stairs right behind her, holding a small camera.</p>
+        <p>"Lisa, get in one with her. I want a picture before we leave."</p>
+        <p>Lisa stood next to Betsy and putting an arm around her shoulder.</p>
+        <p>Becky looked down at the camera screen and then glanced up at the clock on the wall.</p>
+        <p>"Oh, shoot. We're supposed to be there soon. We have to go, right now. Betsy, grab your jacket"</p>
+        <p>The next sixty seconds were a blur of coats, keys jingling, and the running around.</p>
+        <p>"Don't wait up!" Becky called out, kissing Lisa on the cheek as she hurried past her onto the front porch. "There's leftover chicken in the fridge!"</p>
+        <p>"Have fun," Lisa said, standing in the doorway.</p>
+        <p>She watched Becky and Betsy hurry down the steps and climb into the van. Lisa stood completely still on the porch, her arms crossed over her chest, watching for it to disappear.</p>
+        <p>She looked at her watch. 6pm.</p>
+        <p>She turned around, shut the front door. She didn't wait. She walked straight through her quiet house to the back, stepped out onto the rear patio, and walk towards Carla’s.</p>
+        <p>She got to the back door.</p>
+        <p>Carla was leaning on the counter in the kitchen. Waiting.</p>
+        <p>She was wearing a loose gray t-shirt and a short pajama shorts, her feet bare.</p>
+        <p>"Hi," Carla said softly.</p>
+        <p>"Hi," Lisa replied, shutting the door behind her.</p>
+        <p>Carla took a step forward, her eyes focused on Lisa. “I've missed you," Carla said quietly,</p>
+        <p>“I don't know how to stay away from you."</p>
+        <p>She didn't give Lisa a chance to say anything. She walked up to Lisa and kissed her. Lisa melted in to her mouth. She made a small moan noise. She missed her. Her touch, her taste. Everything.</p>
+        <p>She grabbed Carla by the waist, backed her up against the counter. Lisa didn't break the kiss. She gripped Carla's hips and picked her up, and stepped between Carla's parted knees.</p>
+        <p>Lisa reached down, grabbed Carla's shirt, and pulled it over her head tossing it onto the floor.</p>
+        <p>They stopped for a second, both of them breathing heavily, just staring at each other.</p>
+        <p>Lisa grabbed the back of Carla’s neck and kissed hard biting Carla's lower lip.</p>
+        <p>Then, Lisa dropped straight to her knees. She grabbed Carla's sweatpants and pulled them down.</p>
+        <p>Lisa leaned forward and kissed her center.</p>
+        <p>She was starving for it, licking and sucking. She couldn’t get enough. Carla threw her head back. Grabbing Lisa’s head.</p>
+        <p>Two blocks away, van took a sharp, illegal U-turn at the intersection.</p>
+        <p>"Mom, what are you doing?" Betsy asked from the passenger seat, gripping the door handle as the tires squealed.</p>
+        <p>"I forgot my purse," Becky said, frustrated, hitting the accelerator to speed back down their street. "My phone is in it, and the school needs my ID to sign into the chaperone sheet. We're going to be so late. Just stay in the car, I’ll be right back."</p>
+        <p>Becky pulled the van into their driveway, throwing it into park before it had even fully stopped.</p>
+        <p>She jogged up the front porch steps, opened the door. “Lisa?" Becky yelled into the hallway as she stepped inside. "I'm back, I forgot my purse with all the running around!"</p>
+        <p>There was no answer. The house was quiet.</p>
+        <p>Becky hurried through the living room and into the kitchen, looking at the counters.</p>
+        <p>She walked over to the sink to check the island, her eyes naturally drifting up to the window that looked out to Carla’s.</p>
+        <p>She stopped.</p>
+        <p>Through the glass, the lights in Carla's were dim but she could see straight through the window.</p>
+        <p>She saw Carla sitting up on the edge of her kitchen counter. Becky could only see Carla's bare back.</p>
+        <p>Becky stared for a second, knowing she absolutely shouldn't be looking, feeling a sudden flush of embarrassment for spying on her neighbor.</p>
+        <p>But then she saw hands.</p>
+        <p>Two hands reached up and gripped Carla tightly around her bare waist.</p>
+        <p>Becky realized there was someone standing right in front of Carla, down between her legs, doing something to her.</p>
+        <p>She watched Carla’s head fall back hard against the cabinets, her hands reaching down to grab someone’s head.</p>
+        <p>Becky let out a short, disbelieving laugh. She turned her head toward her empty living room, thinking Lisa was upstairs.</p>
+        <p>"Hey, Lisa!" Becky yelled across her house, shaking her head. "Carla is at it again with a hookup..."</p>
+        <p>Becky turned her eyes back to the window just as the figure in front of Carla stood up.</p>
+        <p>The person stepped fully into the light. She wrapped her arms around Carla, leaning down to kiss Carla’s neck while her hand moved aggressively, fucking Carla hard.</p>
+        <p>Carla's body jerk against the counter.</p>
+        <p>Becky’s breath caught in her throat.</p>
+        <p>The bottom fell out of Becky’s stomach.</p>
+        <p>The kitchen around her seemed to tilt, everything went silent. A ringing in her ears.</p>
+        <p>"Lisa..." Becky whispered into the empty room.</p>
+        <p>A single tear fell down her face. The shock was too massive, paralyzing her completely.</p>
+        <p>She stood frozen at the sink, watching her wife bury her face in their neighbor's neck. And fucking her.</p>
+        <p>Becky finally looked down. Her purse and her phone were sitting right there on the corner of the kitchen chair.</p>
+        <p>Her hands were completely numb as she picked them up.</p>
+        <p>She turned around and walked slowly out of the kitchen.</p>
+        <p>She walked out the front door and pulled it shut behind her.</p>
+        <p>She walked down the porch steps, opened the driver's side door of the van, and got inside.</p>
+        <p>She shut the door, but she didn't put the car in reverse. She just sat there, staring blankly at the steering wheel, her chest rising and falling fast.</p>
+        <p>In the passenger seat, Betsy shifted uncomfortably, picking up on the sudden silence in the car.</p>
+        <p>"You okay, Mom?" Betsy asked, looking over at her.</p>
+        <p>Becky didn't move. She didn't blink.</p>
+        <p>"Mom?" Betsy asked again concerned.</p>
+        <p>Becky jumped slightly. She held the tears back, forcing her vision to clear, and swallowed the massive lump of bile in her throat.</p>
+        <p>"What?" Becky said, her voice sounding empty "Huh? Oh... yeah. I'm fine. Let's go before we miss the dance."</p>
+        <p>Becky put the van in reverse. She backed slowly out of the driveway.</p>
+        <p>As she shifted into drive, she turned her head, looking through the window directly at Carla's dark house.</p>
+        <p>She pressed her foot on the gas and drove down the street, staring at the house until it faded from the rearview mirror, her heart breaking into a million pieces.</p>
+        <p>Becky stood behind the table in the corner of the gym, arranging plastic cups next to a punch bowl.</p>
+        <p>She was supposed to be chaperoning, keeping an eye on the kids, but she hadn’t actually looked at a single teenager in an hour.</p>
+        <p>She was completely numb.</p>
+        <p>Her body was going through the motions, smiling when a kid asked for a drink, nodding her head to the music, but her brain was stuck on a continuous loop.</p>
+        <p>The image of Lisa’s hands on Carla’s waist. The way Lisa had leaned in. The aggressive, desperate way she was fucking her.</p>
+        <p>Becky poured another cup of punch, her hand shaking so badly a little red liquid spilled onto the table.</p>
+        <p>"Becky? Hey!"</p>
+        <p>Becky jumped slightly and she looked up.</p>
+        <p>Two women were walking over to her table. It was Sarah and Jill, moms from the neighborhood who had been at Betsy’s birthday party.</p>
+        <p>Sarah was holding a stack of raffle tickets, and Jill had a clipboard. They both looked cheerful, relaxed, and normal.</p>
+        <p>"Hi, guys," Becky managed to say.</p>
+        <p>"I didn't know you were chaperoning tonight." Becky said.</p>
+        <p>“Yeah, we wanted to embarrass the kids. Great turnout. I saw Betsy by the photo booth, she looks so grown up."</p>
+        <p>"She does," Becky said, her voice sounding shaky. She cleared her throat. "Yeah, she was excited."</p>
+        <p>Jill reached over and grabbed a plastic cup, pouring herself a drink. "So, I have to ask," Jill said. "Have you talked to your neighbor this week? The famous author?"</p>
+        <p>Becky’s stomach tightened. "Carla?"</p>
+        <p>"Yes!" Sarah chimed in, her eyes lighting up with gossip. "I was sitting in the dentist's waiting room yesterday and I saw the article in that entertainment magazine. I mean, we all knew she wrote romance, but did you see the photo?"</p>
+        <p>"Lisa mentioned something about it this morning. I... I didn't read the whole thing." Becky said lying. Not thinking straight.</p>
+        <p>"Oh, it's wild," Jill laughed, taking a sip of her punch. "Apparently she was at this massive book convention in Portugal and the someone caught her at the hotel with some mystery woman. The fans are going crazy trying to figure out who it is because her new book is about a lesbian couple."</p>
+        <p>Sarah bumped Jill’s shoulder lightly. "I told Mark last night, I said, 'Well, Carla lives right next door to Lisa and Becky. Being around a married lesbian couple must be rubbing off on her!' She’s giving it a go, I would have never thought she was gay, no offense."</p>
+        <p>The women laughed together.</p>
+        <p>Becky didn't laugh.</p>
+        <p>The joke made her sick. She felt like she had stopped breathing.</p>
+        <p>The gym around her seemed to fade, the loud bass of the speakers made her feel crazy.</p>
+        <p>Rubbing off on her.</p>
+        <p>Becky stared at the punch bowl. The pieces of the last week, the strange behaviors, the excuses, they all suddenly collided in her head with a clarity.</p>
+        <p>She thought about the magazine. She thought about the person standing behind her. Blonde hair.</p>
+        <p>Becky's mind raced backwards. Lisa had been gone for four days. She said she was going to a hearing as a witness.</p>
+        <p>Carla had left the exact same days and said she was in the city.</p>
+        <p>When Lisa came home, she didn't have a tan from standing outside a courthouse.</p>
+        <p>She had a sunburn on her shoulders. And the entire week since they got back, Lisa had been restless, short-tempered, and completely checked out, working late shifts.</p>
+        <p>It wasn't just a hookup. She’s been having an affair.</p>
+        <p>Becky felt the blood drained from her face.</p>
+        <p>The realization was so massive it made her dizzy. The woman in the hotel wasn't a mystery.</p>
+        <p>It was Lisa.</p>
+        <p>Lisa didn't go to a courthouse. She packed her bags, lied straight to Becky’s face, and got on a flight with their neighbor.</p>
+        <p>They had spent four days across the ocean together, sleeping in a hotel room, while Becky sat bored on the front porch.</p>
+        <p>"Becky?"</p>
+        <p>Sarah’s voice broke through the ringing in Becky's ears.</p>
+        <p>The gossipy tone was gone, replaced by concern.</p>
+        <p>Becky blinked, her vision coming back into focus. Sarah and Jill were staring at her.</p>
+        <p>"Are you okay?" Jill asked, setting her plastic cup down on the table. She reached out, her fingers touching Becky's arm. "You just went pale. You look like you're going to pass out."</p>
+        <p>"I..." Becky opened her mouth, but couldn’t get words out.</p>
+        <p>She swallowed hard, fighting the urge to break down crying right there in the middle of the high school.</p>
+        <p>"Do you need to sit down?" Sarah asked, stepping closer. "Let me get you some water."</p>
+        <p>"No," Becky said quickly. She took a step back from the table.</p>
+        <p>She forced her mouth into a smile that was clearly fake. "No, I'm fine. I'm sorry.”</p>
+        <p>"Are you sure?" Jill asked. "You really don't look good, Becky."</p>
+        <p>"I just got a sudden migraine," Becky lied. "It's the bass. The music is just really loud in here, it hit me all at once. I think I just need some air."</p>
+        <p>Sarah nodded sympathetically. "Oh, I get those. They're awful. Go step outside, we'll watch the table."</p>
+        <p>"Thanks," Becky whispered.</p>
+        <p>She turned around and walked away from the table, her legs shaking. She didn't go outside.</p>
+        <p>She walked straight across the gym floor, moving through the groups of dancing teenagers, keeping her head down so no one would see the tears that were forming.</p>
+        <p>She pushed through the double doors leading to the quiet hallway and kept walking until she found the women's restroom.</p>
+        <p>She fell through the door, locking herself inside the first empty stall.</p>
+        <p>Becky sank down onto the closed toilet lid, covered her face with both hands, and finally let herself fall completely apart.</p>
+        <p>Lisa drove. She didn't have a destination in mind. She just needed to put distance between herself and the madness she had just walked away from.</p>
+        <p>Carla flashed into her mind. The warmth of her bedroom. The safety. Then the image of Becky screaming on the kitchen floor violently replaced it. Then work. The precinct, the paperwork, the normalcy she was desperately craving.</p>
+        <p>Lisa spotted an empty parking lot outside a closed strip mall and pulled the car in.</p>
+        <p>She threw the car into park, leaving the engine running, and grabbed her phone. She found Carla’s name and called.</p>
+        <p>Carla picked up on the first ring. "Lisa? Are you okay?"</p>
+        <p>She knew Lisa had left her house not that long ago. For Lisa to be calling already meant something had gone wrong.</p>
+        <p>Lisa leaned her forehead against the steering wheel, squeezing her eyes shut. "I just got into a massive fight with her. She was standing at the kitchen window when I walked in, Carla. Perfectly fine. Just standing there. And when I caught her, she threw a plate into the sink, started screaming at me, and then threw herself on the floor the second Betsy came downstairs."</p>
+        <p>Carla let out a frustrated sigh.</p>
+        <p>"She tried to tell Betsy I pushed her, or abandoned her, or I don't even know," Lisa continued. "I just left. I walked out the door and got in my car. Carla, it's time. I have to start making the move to get out of this house. I need to talk to Betsy alone, explain things, and then I am leaving Becky."</p>
+        <p>Carla just listened. She didn't interrupt, and she didn't try to calm Lisa down with empty promises. Carla was ready. She was in love with this woman, and she wanted her out of that trap badly. She just wasn’t sure Lisa would ever actually do it.</p>
+        <p>"Can I do anything, Lisa?" Carla asked.</p>
+        <p>"You've done enough, Carla," Lisa said. "I'm so sorry you got pulled into all of this. I..."</p>
+        <p>"Shhhh, hey," Carla interrupted quickly, cutting off the apology. "Meeting you has been the best thing in my life. I am not sorry I am in the middle of this. I only wish it were under different circumstances."</p>
+        <p>Lisa let out small laugh, "Yeah. Me too."</p>
+        <p>"Are you safe right now? Where are you?" Carla asked.</p>
+        <p>"I'm just sitting in a parking lot a few miles away," Lisa said. "I got in my car and drove off. I didn't know what to do after she made that scene in front of Betsy."</p>
+        <p>"How about you go get a hotel room for the night," Carla suggested. "Let her cool off. You need a break, and going back right now is just going to start another screaming match."</p>
+        <p>The suggestion was loaded, and they both knew it. A hotel room meant Carla could come to her, and they could actually be together without Lisa rushing off.</p>
+        <p>Lisa smiled, the tension easing just a little.</p>
+        <p>"I do need to go grab some stuff from the house first, though. Clothes. My toothbrush."</p>
+        <p>"Lisa, going back there right now isn't a good idea," Carla warned. "She's unstable. Just go to a store, buy what you need for tonight."</p>
+        <p>"I have to check on Betsy," Lisa insisted, her stubborn streak taking over. "I can't just leave her alone with Becky after that. I'll be quick. I'll just grab a bag and get out."</p>
+        <p>Carla sighed, knowing she couldn't win this argument. "Okay. Keep your phone on. Call me the second you leave."</p>
+        <p>Lisa hung up. She put the car in drive, turned out of the parking lot, and headed back toward the house.</p>
+        <p>When Lisa walked through the front door, the house was quiet. She walked cautiously toward the kitchen, half expecting Becky to be waiting for her, but the room was empty. The shattered plate and the coffee mug was still scattered across the floor and the counter.</p>
+        <p>Lisa walked to the utility closet, grabbed the broom and dustpan, and started cleaning up the mess.</p>
+        <p>She swept the broken pieces into a pile, dumped them into the trash can, and wiped down the counter.</p>
+        <p>Footsteps sounded on the staircase.</p>
+        <p>Lisa turned as Betsy walked into the kitchen. The teenager's face was pale, and her eyes were red and swollen.</p>
+        <p>"Mom..." Betsy said, her voice cracking instantly. She started crying again, crossing the kitchen quickly.</p>
+        <p>Lisa dropped the rag on the counter and caught her daughter, wrapping both arms securely around her.</p>
+        <p>Betsy buried her face in Lisa’s shoulder, holding on tight.</p>
+        <p>Lisa hugged her back, resting her chin on Betsy’s head, tears falling.</p>
+        <p>"Mom, please, will you tell me what's happening?" Betsy cried against her shirt.</p>
+        <p>"Oh, angel," Lisa whispered, smoothing down the back of Betsy’s hair. "Your mother and I just aren't seeing eye to eye at the moment. Things are just really tense right now."</p>
+        <p>Lisa hugged her tighter, hating the vague answer but knowing she couldn't drop the truth on a 16 year old while Becky was sleeping fifty feet away.</p>
+        <p>"Listen," Lisa said, pulling back just enough to look Betsy in the eye. "I've got the kitchen cleaned up. I am going to head to work for the night. I'm taking an overnight shift. They really need me on a case."</p>
+        <p>Lisa felt horrible lying to her face. She hated it. But she needed to get out of the house for the night before Becky completely messed with Betsy’s head again, and a work excuse was the only thing Becky couldn't argue with.</p>
+        <p>"It's okay, Mom, I understand," Betsy said, wiping her nose with the back of her hand. "I can take care of her for the night."</p>
+        <p>Betsy stepped back, turning toward the stairs.</p>
+        <p>"If anything happens, please call my cell, okay?" Lisa called out, watching her go. "I don't care what time it is. I'll get home as fast as I can."</p>
+        <p>Betsy managed a small, tired smile. "I will. Bye, Mom."</p>
+        <p>Lisa watched her walk upstairs. Once she heard Betsy’s bedroom door close, Lisa moved quickly.</p>
+        <p>She walked past the guest room, and went straight upstairs to her bedroom.</p>
+        <p>The room felt horrible to her now. She walked into the closet, heading for the very back where they kept the luggage and travel gear.</p>
+        <p>She looked up at the top shelf, spotting the black duffel bag she used for trips.</p>
+        <p>Lisa reached up and grabbed the handle, giving it a hard pull.</p>
+        <p>The bag was stuck. As it came loose, it dragged a cardboard box along with it.</p>
+        <p>The box had been hidden underneath the luggage.</p>
+        <p>The box tipped over the edge of the shelf, the lid falling off.</p>
+        <p>Stacks of loose paper came down, hitting Lisa on the shoulders and scattering all over the closet floor.</p>
+        <p>"Damn it," Lisa cursed, frustrated.</p>
+        <p>She threw the duffel bag onto the floor and bent down to pick up the mess.</p>
+        <p>She started gathering the papers into a pile. She planned to just shove them back into the box, but as she grabbed a handful of pages, a logo caught her eye.</p>
+        <p>It was a bank logo. But it wasn't the bank they used for their joint checking or savings accounts.</p>
+        <p>Lisa frowned. She looked closer at the top sheet. It was a formal bank statement, addressed solely to Becky.</p>
+        <p>Lisa stood up slowly, holding the stack of papers. She walked out of the closet and dumped the entire pile onto the center of the bed.</p>
+        <p>She started thumbing through the pages, spreading them out across the quilt.</p>
+        <p>"What the..." Lisa whispered.</p>
+        <p>She picked up a statement from two months ago. The balance at the bottom of the page made lose her breath. It was a massive amount of money.</p>
+        <p>Lisa frantically grabbed more papers, organizing them by date, trying to understand what she was looking at.</p>
+        <p>Lisa had always let Becky handle the finances. Lisa worked the long shifts, brought in the paycheck, and Becky managed the bills, the savings, and the investments.</p>
+        <p>Becky was brilliant with numbers, she was organized , so Lisa had never questioned a single decision. She simply trusted her wife.</p>
+        <p>But as Lisa read the statements, a horrifying picture began to form.</p>
+        <p>There were records of personal loans taken out in both of their names. There were transfer receipts showing hundreds of dollars at a time moving from their joint account into this hidden account.</p>
+        <p>The dates on the oldest statements went back 10 years.</p>
+        <p>10 years.</p>
+        <p>Becky had been siphoning money from Lisa's paycheck a bit at a time, for a decade.</p>
+        <p>She had built a hidden nest egg, taking out loans under Lisa’s name to cover the deficits in their regular accounts, perfectly balancing the books so Lisa would never notice the missing funds.</p>
+        <p>Lisa’s eyes went wide as the math finally clicked into place.</p>
+        <p>Becky wasn't just manipulating her emotionally. She wasn't just faking to keep Lisa trapped.</p>
+        <p>She had been financially trapping her for their entire marriage. If Lisa ever tried to leave, she would walk away completely broke and saddled with debt she didn't even know she had, while Becky sat on a fortune.</p>
+        <p>"What the fuck," Lisa said again.</p>
+        <p>Her hands were shaking. The betrayal was so thoroughly calculated, it made her feel physically sick.</p>
+        <p>The woman downstairs wasn't just controlling, she was a predator.</p>
+        <p>Lisa moved with sudden purpose. She grabbed every piece of paper off the bed, making sure she didn't leave a single receipt behind.</p>
+        <p>She shoved all of them into the duffel bag. She grabbed a pair of jeans, a clean shirt, and her toiletries from the bathroom, throwing them on top of the financial records, and zipped the bag shut.</p>
+        <p>She threw the strap over her shoulder and walked out of the bedroom.</p>
+        <p>She stopped at Betsy’s door, pushing it open slightly. Betsy was sitting on her bed, her laptop open in front of her.</p>
+        <p>"Hey," Lisa said. "I'm heading out."</p>
+        <p>Betsy looked up. "Okay. What do I tell Mom when she wakes up?"</p>
+        <p>"Just let her know I'm working," Lisa said, walking over and kissing the top of Betsy’s head. "I'll be back tomorrow. Call me if you need me."</p>
+        <p>"I will," Betsy promised.</p>
+        <p>Lisa walked down the stairs and straight out the front door. She got into her car, threw the duffel bag onto the passenger seat, and started the car.</p>
+        <p>She picked up her phone and typed a quick text to Carla.</p>
+        <p>I got my stuff. Going to the Marriott. Meet me there.</p>
+    </div>
+
+    <!-- Interaction Box (Kudos, Subscribe, Comments) -->
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">193</span> Kudos left on this work</p>
+        </div>
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+        <!-- Real Disqus Comment Section -->
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter22"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

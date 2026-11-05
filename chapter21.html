@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper Trails - Chapter 21</title>
+    <style>
+        body { background-color: #f4f1ea; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E"); color: #2b2b2b; font-family: 'Merriweather', serif; padding: 20px; user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        h1 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
+        .story-text { max-width: 700px; margin: 0 auto; line-height: 1.8; font-size: 18px; background: rgba(255, 255, 255, 0.85); padding: 40px; border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        .back-link { display: block; max-width: 700px; margin: 20px auto; color: #8c9360; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        
+        /* Interaction Section Styles */
+        .interaction-box { max-width: 700px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; }
+        .kudos-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .kudos-btn { background-color: #f4f1ea; border: 2px solid #4b5320; color: #4b5320; padding: 10px 25px; font-size: 18px; font-weight: bold; cursor: pointer; border-radius: 25px; transition: 0.3s; }
+        .kudos-btn:hover { background-color: #d1d5c5; }
+        .kudos-btn.clicked { background-color: #4b5320; color: #f4f1ea; cursor: default; }
+        .kudos-text { font-style: italic; color: #8c9360; margin-top: 10px; }
+        .subscribe-area { text-align: center; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px dashed #d1d5c5; }
+        .subscribe-area input { padding: 10px; width: 60%; border: 1px solid #4b5320; border-radius: 2px; }
+        .subscribe-area button { padding: 10px 20px; background-color: #4b5320; color: white; border: none; cursor: pointer; font-weight: bold; }
+        .subscribe-area button:hover { background-color: #8c9360; }
+        #toast { visibility: hidden; min-width: 250px; background-color: #333; color: #fff; text-align: center; border-radius: 2px; padding: 16px; position: fixed; z-index: 1; left: 50%; bottom: 30px; transform: translateX(-50%); }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+    
+    <div class="story-text">
+        <h1>Chapter 21: The Photo</h1>
+        
+        <p>Lisa cleaned up the food and bottles from outside. She wanted to go inside and hide out for a long time.</p>
+        <p>She cleaned the dishes. Staring off in to space. She started thinking of a way to make this right. She knew inevitably she was going to leave Becky. She was too far deep in to Carla now.</p>
+        <p>Lisa walked out to the kitchen just as Becky came through the door from the garage, carrying two plastic grocery bags and dry cleaning over her arm.</p>
+        <p>"Traffic was miserable," Becky said, dropping the bags onto the kitchen island. "Did Carla take off?"</p>
+        <p>Lisa walked over and took the dry cleaning plastic from Becky's hand, hanging it on the hook by the laundry room. "Yeah. She said she had a deadline to get back to. A chapter she needed to finish."</p>
+        <p>"She works too much," Becky said, pulling a carton of milk from the bag. "I swear, half the time she doesn't even leave that house unless I drag her out here for a drink."</p>
+        <p>Lisa didn't answer. She opened the refrigerator and put the milk away, staring in to space again.</p>
+        <p>Standing there in her own kitchen, listening to her wife talk about anything, Lisa felt like a complete stranger in her own life.</p>
+        <p>The guilt wasn't even there anymore.</p>
+        <p>Four days went by like that.</p>
+        <p>Lisa went back to her regular shift rotation at the precinct twelve hour days that went into evenings.</p>
+        <p>She threw herself into casework, taking on extra paperwork just so she wouldn't have to be home.</p>
+        <p>Carla stuck to her word.</p>
+        <p>On Wednesday evening, Becky sat across from Lisa at the dinner table and frowned at her phone.</p>
+        <p>"I think Carla’s ignoring me," Becky said, setting her fork down. "I sent her two texts about coming over for pasta tonight and she didn't even read them."</p>
+        <p>Lisa chewed her food slowly. "She told you she had that writing deadline, Beck."</p>
+        <p>"I guess," Becky sighed. "It’s just rude."</p>
+        <p>Lisa looked down at her plate. It wasn't about a book she thought.</p>
+        <p>Carla was cutting the cord. She was sitting inside that house twenty yards away, forcing herself not to look out the window, waiting for Lisa to either make a real move or disappear for good.</p>
+        <p>By Friday night, Lisa was running on cold coffee and three hours of sleep.</p>
+        <p>She signed out of the precinct at midnight after a long shift. The drive back to the neighborhood was quiet, the roads empty and dark.</p>
+        <p>When she turned onto their street, she killed the headlights.</p>
+        <p>The downstairs of her house was dark. Becky had been in bed since ten.</p>
+        <p>Lisa sat in the driver's seat with the engine off, her hands resting on the bottom of the steering wheel. She looked across the lawn separating the two driveways.</p>
+        <p>Carla’s house was dark too. Except her office.</p>
+        <p>Lisa’s hand hovered over the door handle. Her chest tightened, and every instinct she had screamed at her to get out of the car, walk across the grass, and tap on Carla's back patio door.</p>
+        <p>She wanted to pull Carla into her arms and tell her how she felt.</p>
+        <p>But she didn't move.</p>
+        <p>Carla’s words from Sunday echoed in her head: I can't see you anymore. Not for a while.</p>
+        <p>Carla was right. Going over there at midnight while her wife slept forty yards away wasn't brave. It wasn't love. It was just more hiding, more using Carla as an escape without actually changing a single thing about her reality.</p>
+        <p>If she walked over there tonight, she would just be proving that she really was a coward.</p>
+        <p>Lisa slowly opened her door. She grabbed her duffel bag from the passenger seat, stepped out of the car, and closed the door as quietly as she could without letting it slam.</p>
+        <p>She didn't look at Carla's window again as she walked up her own front steps and unlocked the door.</p>
+        <p>The house was silent. Lisa dropped her keys into the bowl by the door and unbuckled her heavy utility belt, setting it on the kitchen counter beside her radio and badge.</p>
+        <p>She pulled off her work boots, leaving them by the mat, and walked down the hall in her socks.</p>
+        <p>The house felt different to her now. It didn't feel like a home anymore, it felt like a waiting room.</p>
+        <p>Every framed photo on the wall, their trip to the lake three years ago, Becky smiling at a Christmas party with her arm around Lisa's shoulders, felt like it belonged to two completely different people.</p>
+        <p>Lisa pushed the bedroom door open.</p>
+        <p>Becky was asleep on the far side of the mattress, curled on her side with the comforter pulled up to her shoulders. She stirred slightly when the door opened, letting out a quiet, sleepy sigh before settling back into the pillows.</p>
+        <p>Lisa stood by the dresser in the dark, watching her breathe.</p>
+        <p>Her heart hurt. Becky hadn't done anything wrong. That was the part that made Lisa feel like she was suffocating.</p>
+        <p>Becky didn't cheat. Becky didn't scream or start fights. She just lived her life, making lasagna, folding laundry, talking about soccer schedules, completely trusting the woman she married.</p>
+        <p>And in return, Lisa had gutted their marriage from the inside out and hadn't even had the guts to tell her yet.</p>
+        <p>Lisa stripped out of her uniform shirt and trousers, tossing them into the laundry hamper.</p>
+        <p>She pulled on a plain gray t shirt and slid under the covers on her side of the bed, staying as close to the edge as she could so the mattress wouldn't dip.</p>
+        <p>She lay flat on her back, staring straight up at the ceiling fan.</p>
+        <p>She couldn't close her eyes. Her mind was racing, turning over the pieces of what she had to do next.</p>
+        <p>She tried to imagine the conversation. How do you actually say the words? She rehearsed it in her head, testing different sentences, trying to find one that wouldn't destroy Becky.</p>
+        <p>I'm not happy anymore.</p>
+        <p>That sounded hollow. Cheap. Like an excuse from a bad television show.</p>
+        <p>We've grown apart.</p>
+        <p>Becky wouldn't buy that. Becky thought they were fine. Just last night she had been talking about painting the guest bathroom in the spring.</p>
+        <p>Lisa turned her head slightly on the pillow, looking at the dark outline of Becky’s shoulders under the blankets.</p>
+        <p>She knew she couldn't mention Carla. Not at first. If she brought Carla into it, the entire conversation would turn into an explosion. It would give Becky something easy to hate.</p>
+        <p>But the truth, the real, miserable truth Lisa had been avoiding all week, was that her marriage had been running on empty long before Carla ever moved in next door.</p>
+        <p>Carla hadn't broken a happy home. Carla had just woken Lisa up to the fact that she had been sleepwalking through her own life for years.</p>
+        <p>Still, the guilt was heavy enough to make her stomach ache. She imagined the look on Becky's face when she finally understood what Lisa was saying.</p>
+        <p>She imagined the crying, the questions she wouldn't be able to answer, the way the neighborhood would talk when Lisa packed her bags into the back of her SUV and pulled out of the driveway for the last time.</p>
+        <p>It was going to be ugly. It was going to hurt someone who didn't deserve an ounce of it.</p>
+        <p>Lisa closed her eyes. She thought about the way Carla had looked at her in the bathroom on Sunday, the tears running down her cheeks, the exhaustion in her voice when she said I can't handle this anymore.</p>
+        <p>Lisa realized she couldn't handle it either. She couldn't spend another week playing two different roles, coming home to a bed she didn't want to be in, and watching the woman she actually loved wither away behind closed blinds next door.</p>
+        <p>She opened her eyes and looked back up at the ceiling. The clock on the nightstand read 1:42 AM.</p>
+        <p>Tomorrow, Lisa thought.</p>
+        <p>Not next week. Tomorrow morning, when they woke up, before Becky could start talking about weekend errands or yard work.</p>
+        <p>She was going to make a pot of coffee, sit down at the kitchen island, and finally tell her wife the truth.</p>
+        <p>Lisa let out a long, slow breath into the quiet bedroom. She didn't sleep. She just lay there on her side of the mattress, watching the light shift across the walls, waiting for the sun to come up.</p>
+        <p>The smell of toast and coffee hit Lisa before she even reached the bottom of the stairs. She had slept maybe forty-five minutes total.</p>
+        <p>Her eyes were heavy and her head hurt.</p>
+        <p>She had already taken a shower and got ready for work. Her late shift didn't start for another two hours, but getting dressed for work gave her something to hide behind.</p>
+        <p>When she walked into the kitchen, Becky was sitting at the island in her bathrobe, a butter knife in one hand and a glossy magazine spread open on the countertop next to her coffee mug.</p>
+        <p>"Morning," Becky said without looking up from the page. "There's fresh in the pot. I made you a piece of sourdough."</p>
+        <p>"Thanks," Lisa said.</p>
+        <p>She walked over to the coffee maker, her chest tight.</p>
+        <p>Just say it, she told herself as she poured the coffee. Sit down across from her, tell her you need to talk, and don't let her change the subject.</p>
+        <p>She turned around with her mug, bracing herself, she started to open her mouth when Becky let out a loud, surprised laugh.</p>
+        <p>"Oh, wow," Becky said, tapping the page with her fingernail. "This magazine has a whole spread on Carla. Well Sloane. Did you know that was her pen name?"</p>
+        <p>Lisa froze with her mug halfway to her mouth.</p>
+        <p>A drop of hot coffee spilled over the rim and hit her thumb, but she barely felt it. "What?"</p>
+        <p>"Her pen name," Becky laughed, shaking her head as she scanned the column. "I mean, I knew she wrote romance, but I didn't know she was big enough to get in Entertainment Mag. Look at this."</p>
+        <p>Lisa walked over to the island her stomach in knot. "What does it say?"</p>
+        <p>"Oh, apparently she was at that convention in Portugal recently," Becky said, her eyes reading the articles. "And get this, it says she was caught at the hotel with another woman. Really? Carla?" Becky looked up at Lisa, her eyebrows raised in amusement. "Who knew our quiet little neighbor was living a double life?"</p>
+        <p>Lisa couldn't breathe. Her heart was beating fast. She set her mug down on the counter so she wouldn't drop it. "What do you mean, caught?"</p>
+        <p>"It says fans speculated she was having a whole weekend fling and brought a woman with her," Becky read aloud, a grin on her face. "Listen to this part: 'In light of her upcoming release, fans are wondering if Sloane is trying the material on for size.' Because her new book is about lesbians!"</p>
+        <p>Becky laughed out loud, taking a bite of her toast. "So she's writing lesbian smut now? God, maybe I need to buy this book."</p>
+        <p>Becky turned the magazine around and slid it across the island toward Lisa. "Look. Somebody took a photo of her."</p>
+        <p>Lisa looked down at the page afraid of what she was about to see.</p>
+        <p>It was a candid shot, of her at her hotel door in a robe. In the background was a half shot of a blonde hair. Clearly female. But you couldn’t see the face.</p>
+        <p>She leaned in closer, pretending to squint at the text while her eyes scanned every single word in the caption and the article body. She checked for a name. She checked for detective, for police, for friend.</p>
+        <p>Nothing. The writer of the article just referred to "an unidentified companion."</p>
+        <p>Lisa let out a breath she felt like she'd been holding for days. Her knees felt weak.</p>
+        <p>"My goodness," Becky said, standing up and taking her empty plate over to the sink. "Who would have thought?"</p>
+        <p>"You can't trust those magazines anyway," Lisa said nervously. She slid the magazine back toward Becky's side of the island. "Half of that stuff is just fabricated to sell copies."</p>
+        <p>"Yeah, I suppose you're right," Becky said, turning the tap on to rinse her knife.</p>
+        <p>She glanced over her shoulder with a smirk. "Maybe I'll just ask her about it later. I'll go knock on her door and ask if she's got a secret girlfriend." She laughed clearly not being serious.</p>
+        <p>"It's none of our business, Becky," Lisa said.</p>
+        <p>The harshness in her tone made Becky pause. She turned the water off and looked at Lisa, her grin fading a little. "I was just joking, Lisa. Jesus. You don't have to bite my head off."</p>
+        <p>"I'm not biting your head off," Lisa said, rubbing the back of her neck with a shaking hand. She forced her voice to soften, digging up every ounce of control she had left. "I just... I have a massive headache, and I don't think Carla would appreciate us prying into her personal life over some tabloid gossip."</p>
+        <p>"Okay, okay. Message received," Becky said, holding her hands up defensively before reaching for her coffee. "You really need to take some aspirin before you go in today. You look stressed."</p>
+        <p>"Yeah. I will."</p>
+        <p>Lisa grabbed her keys off the counter and her duty belt from the chair. The script she had rehearsed all night, the speech about not being happy, about leaving, was completely gone. She couldn't do it right now.</p>
+        <p>Not with that magazine sitting open on the kitchen island, and definitely not while Becky was in a mood to joke about Carla's sex life.</p>
+        <p>If she broke it off right this second, Becky would put two and two together by lunchtime.</p>
+        <p>"I'm going to head in early," Lisa said, strapping her belt around her waist. "I want to beat the morning traffic on the bypass."</p>
+        <p>"Alright," Becky said, already looking back down at her phone. "Don't work too late. Text me if you want me to save you dinner."</p>
+        <p>"I will."</p>
+        <p>Lisa didn't wait for her to say anything else. She walked out, hit the door button, and climbed into her car.</p>
+        <p>She didn't turn the engine on right away. She sat in the driver's seat and pulled her phone out of her pocket.</p>
+        <p>She stared at Carla’s contact number.</p>
+        <p>She thought about what she was gonna say or do.. but nothing came to mind.</p>
+        <p>She felt hopeless and lost. She turned the car on and drove to work. She would figure it all out later.</p>
+    </div>
+
+    <div class="interaction-box">
+        <div class="kudos-area">
+            <button id="kudosBtn" class="kudos-btn" onclick="leaveKudos()">♥ Kudos</button>
+            <p class="kudos-text"><span id="kudosCount">176</span> Kudos left on this work</p>
+        </div>
+        <div class="subscribe-area">
+            <h3>Subscribe to The Jenn</h3>
+            <input type="email" id="emailInput" placeholder="Enter your email to get chapter alerts">
+            <button onclick="showToast('Thank you for subscribing!')">Subscribe</button>
+        </div>
+        <div class="comment-area">
+            <h3>Comments</h3>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;  
+                    this.page.identifier = "chapter21"; 
+                };
+                (function() { 
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+    <div id="toast">Message sent!</div>
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+        });
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+        let kudosGiven = false;
+        function leaveKudos() {
+            if(!kudosGiven) {
+                let countSpan = document.getElementById("kudosCount");
+                let currentCount = parseInt(countSpan.innerText);
+                countSpan.innerText = currentCount + 1;
+                let btn = document.getElementById("kudosBtn");
+                btn.innerText = "♥ Kudos Left!";
+                btn.classList.add("clicked");
+                kudosGiven = true;
+                showToast("Thank you for leaving kudos!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -2,34 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Inferno - Writings By The Jenn</title>
     <style>
-        body { 
-            background-color: #4b5320; 
-            color: white; 
-            font-family: Arial; 
-            padding: 40px; 
-            text-align: center; 
+        body {
+            /* High-quality fire background image */
+            background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        a { 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-size: 1.2rem; 
-            border: 2px solid #000000; 
+        
+        .content-box {
+            /* Dark, slightly see-through box so you can read the text over the fire */
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 50px 60px;
+            border: 2px solid #ff4500; /* Fiery orange-red border */
+            border-radius: 8px;
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            margin-top: 40px;
+            box-shadow: 0 0 25px rgba(255, 69, 0, 0.3); /* Subtle orange glow behind the box */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-top: 0;
+            color: #ffaa00; /* Fire-yellow text */
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ff4500;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Army green button matching your main page */
+        .home-btn {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 2px solid #000000;
             background-color: #3b4219;
-            padding: 10px 20px; 
-            border-radius: 5px; 
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
         }
-        a:hover { 
-            background-color: #000000; 
-            color: #ffffff; 
+
+        .home-btn:hover {
+            background-color: #000000;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <h1>The Inferno</h1>
-    <p>Chapters coming soon...</p>
-    <br><br>
-    <a href="index.html">← Back to Home</a>
+
+    <div class="content-box">
+        <h1>The Inferno</h1>
+        
+        <p>Chapters coming soon...</p>
+        
+        <!-- You will paste your chapter links, story text, and Disqus code in this box later -->
+        
+        <a href="index.html" class="home-btn">← Back to Home</a>
+    </div>
+
 </body>
 </html>

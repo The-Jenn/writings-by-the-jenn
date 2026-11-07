@@ -6,95 +6,67 @@
     <title>Writings By The Jenn</title>
     <style>
         body {
-            background-color: #f4f1ea;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
-            color: #2b2b2b;
-            font-family: 'Merriweather', serif;
+            background-color: #0b3d0b; /* Deep green background */
+            color: #ffffff;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
         }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #4b5320; text-align: center; }
-        .container { max-width: 800px; margin: 40px auto; padding: 20px 40px; background: rgba(255, 255, 255, 0.85); border: 2px solid #4b5320; border-radius: 4px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
-        .header-divider { text-align: center; margin: 20px 0; color: #8c9360; }
-        
-        .cover-image { width: 100%; max-width: 540px; margin: 0 auto 30px auto; display: block; text-align: center; }
-        
-        ul.chapter-list { list-style: none; padding: 0; }
-        ul.chapter-list li { padding: 10px; border-bottom: 1px solid #d1d5c5; display: flex; justify-content: space-between; }
-        ul.chapter-list li a { color: #4b5320; text-decoration: none; font-weight: bold; }
-        ul.chapter-list li a:hover { text-decoration: underline; }
-        
-        .comment-area { margin-top: 40px; padding-top: 30px; border-top: 1px dashed #d1d5c5; }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #062b06; /* Slightly darker green header */
+            border-bottom: 3px solid #4caf50;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-top: 10px;
+            color: #a3d9a3; /* Lighter green for subtitle */
+        }
+        .menu-container {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns links to the left */
+            gap: 15px;
+        }
+        .story-link {
+            background-color: #145c14;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            width: 300px; /* Keeps all buttons the exact same width */
+            border-left: 6px solid #4caf50;
+            transition: background 0.3s, padding-left 0.3s;
+        }
+        .story-link:hover {
+            background-color: #1f851f;
+            padding-left: 35px; /* Slight indent effect on hover */
+        }
     </style>
 </head>
-<body oncontextmenu="return false;">
-    <div class="container">
+<body>
+
+    <div class="header">
         <h1>Writings By The Jenn</h1>
-        <div class="header-divider">◈ ◈ ◈</div>
-        <p style="text-align: center; font-style: italic;">Welcome to my official writing archive. All original works and fanfiction are protected.</p>
-        
-        <!-- Tumblr Embed Image -->
-        <div class="cover-image">
-            <div class="tumblr-post" data-href="https://embed.tumblr.com/embed/post/t:yp6_gir4p4kHVvJQ6ax4Tg/832320749898498048/v2" data-did="3fe653fbb1d592cd241ef191ebb8d517d5782e3e"><a href="https://www.tumblr.com/the-jenn/832320749898498048/working-in-a-new-website-for-my-fics">https://www.tumblr.com/the-jenn/832320749898498048/working-in-a-new-website-for-my-fics</a></div><script async src="https://assets.tumblr.com/post.js?_v=2e3257777411face7e6785c8941f968f"></script>
-        </div>
-
-        <h2>Latest Chapters</h2>
-        <ul class="chapter-list">
-            <li><a href="chapter1.html">Chapter 1 - The Suburbs</a></li>
-            <li><a href="chapter2.html">Chapter 2 - Temptation</a></li>
-            <li><a href="chapter3.html">Chapter 3 - Dinner Date</a></li>
-            <li><a href="chapter4.html">Chapter 4 - More Temptation</a></li>
-            <li><a href="chapter5.html">Chapter 5 - Aggravation</a></li>
-            <li><a href="chapter6.html">Chapter 6 - Dinner Guest</a></li>
-            <li><a href="chapter7.html">Chapter 7 - Pool Tension</a></li>
-            <li><a href="chapter8.html">Chapter 8 - Close</a></li>
-            <li><a href="chapter9.html">Chapter 9 - Heat of the Storm</a></li>
-            <li><a href="chapter10.html">Chapter 10 - The Morning After</a></li>
-            <li><a href="chapter11.html">Chapter 11 - Tension</a></li>
-            <li><a href="chapter12.html">Chapter 12 - Finally</a></li>
-            <li><a href="chapter13.html">Chapter 13 - The Hotel Room</a></li>
-            <li><a href="chapter14.html">Chapter 14 - Betsy's B-day Party</a></li>
-            <li><a href="chapter15.html">Chapter 15 - Restless</a></li>
-            <li><a href="chapter16.html">Chapter 16 - More Time</a></li>
-            <li><a href="chapter17.html">Chapter 17 - Portugal</a></li>
-            <li><a href="chapter18.html">Chapter 18 - Day Two</a></li>
-            <li><a href="chapter19.html">Chapter 19 - Their Last Day</a></li>
-            <li><a href="chapter20.html">Chapter 20 - Back to Reality</a></li>
-            <li><a href="chapter21.html">Chapter 21 - The Photo</a></li>
-            <li><a href="chapter22.html">Chapter 22 - The Kitchen Window</a></li>
-            <li><a href="chapter23.html">Chapter 23 - Desperate</a></li>
-            <li><a href="chapter24.html">Chapter 24 - Smile</a></li>
-            <li><a href="chapter25.html">Chapter 25 - The Realization</a></li>
-            <li><a href="chapter26.html">Chapter 26 - Betrayal</a></li>
-        </ul>
-
-        <!-- Real Disqus Comment Section for Homepage -->
-        <div class="comment-area">
-            <h3>Guestbook & General Comments</h3>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;  
-                    this.page.identifier = "homepage"; 
-                };
-                (function() { 
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the comments.</noscript>
-        </div>
+        <h2>Fanfiction Stories</h2>
     </div>
 
-    <script>
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
-        });
-    </script>
+    <div class="menu-container">
+        <!-- Links to your story pages -->
+        <a href="stories.html" class="story-link">1. Paper Trails</a>
+        <a href="locus-of-control.html" class="story-link">2. Locus Of Control</a>
+        <a href="the-inferno.html" class="story-link">3. The Inferno</a>
+        <a href="adjourned-affections.html" class="story-link">4. Adjourned Affections</a>
+    </div>
+
 </body>
 </html>

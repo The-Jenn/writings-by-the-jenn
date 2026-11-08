@@ -6,8 +6,8 @@
     <title>The Inferno - Writings By The Jenn</title>
     <style>
         body {
-            /* High-quality fire background image */
-            background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80');
+            background-color: #4b5320; /* Army green fallback */
+            background-image: url('0568a535-6aed-4f91-9fc0-4681c9e9b027.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -18,54 +18,70 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
         }
-        
         .content-box {
-            /* Dark, slightly see-through box so you can read the text over the fire */
-            background-color: rgba(0, 0, 0, 0.85);
-            padding: 50px 60px;
-            border: 2px solid #ff4500; /* Fiery orange-red border */
+            background-color: rgba(59, 66, 25, 0.9); /* Slightly transparent so the background shows through */
+            padding: 40px;
+            border: 4px solid #000000;
             border-radius: 8px;
-            text-align: center;
             max-width: 800px;
-            width: 90%;
-            margin-top: 40px;
-            box-shadow: 0 0 25px rgba(255, 69, 0, 0.3); /* Subtle orange glow behind the box */
+            width: 100%;
+            text-align: center;
         }
-
         h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-top: 0;
-            color: #ffaa00; /* Fire-yellow text */
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #ff4500;
+            border-bottom: 2px solid #000000;
             padding-bottom: 20px;
         }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .story-image {
+            max-width: 100%;
+            height: auto;
+            border: 4px solid #000000;
+            border-radius: 5px;
             margin-bottom: 30px;
         }
-
-        /* Army green button matching your main page */
+        .chapter-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .chapter-link {
+            background-color: #4b5320;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            width: 80%;
+            transition: background 0.3s;
+        }
+        .chapter-link:hover {
+            background-color: #000000;
+        }
         .home-btn {
             display: inline-block;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            border: 2px solid #000000;
-            background-color: #3b4219;
-            padding: 12px 25px;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .home-btn:hover {
+            margin-top: 30px;
             background-color: #000000;
-            color: #ffffff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .home-btn:hover {
+            background-color: #222222;
+        }
+        #disqus_thread {
+            margin-top: 50px;
+            text-align: left;
+            background-color: #cddb9f; 
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #000000;
         }
     </style>
 </head>
@@ -74,10 +90,63 @@
     <div class="content-box">
         <h1>The Inferno</h1>
         
-        <p>Chapters coming soon...</p>
-        
-        <!-- You will paste your chapter links, story text, and Disqus code in this box later -->
-        
+        <!-- The cover image has been updated to your provided file -->
+        <img src="0568a535-6aed-4f91-9fc0-4681c9e9b027.webp" alt="The Inferno Cover" class="story-image">
+
+        <div class="chapter-grid">
+            <a href="inferno-chapter1.html" class="chapter-link">Chapter 1 - The Bank Heist</a>
+            <a href="inferno-chapter2.html" class="chapter-link">Chapter 2 - Off the Clock</a>
+            <a href="inferno-chapter3.html" class="chapter-link">Chapter 3 - The Weight of the Suit</a>
+            <a href="inferno-chapter4.html" class="chapter-link">Chapter 4 - Fuel</a>
+            <a href="inferno-chapter5.html" class="chapter-link">Chapter 5 - Midnight Thoughts</a>
+            <a href="inferno-chapter6.html" class="chapter-link">Chapter 6 - Boundaries</a>
+            <a href="inferno-chapter7.html" class="chapter-link">Chapter 7 - The Couch</a>
+            <a href="inferno-chapter8.html" class="chapter-link">Chapter 8 - Losing Control</a>
+            <a href="inferno-chapter9.html" class="chapter-link">Chapter 9 - Dirty Little Secret</a>
+            <a href="inferno-chapter10.html" class="chapter-link">Chapter 10 - The Desk</a>
+            <a href="inferno-chapter11.html" class="chapter-link">Chapter 11 - The Price of a Wall</a>
+            <a href="inferno-chapter12.html" class="chapter-link">Chapter 12 - The Real Rescue</a>
+            <a href="inferno-chapter13.html" class="chapter-link">Chapter 13 - The Echo of the Day</a>
+            <a href="inferno-chapter14.html" class="chapter-link">Chapter 14 - Uninterrupted</a>
+            <a href="inferno-chapter15.html" class="chapter-link">Chapter 15 - Bomber Exposed</a>
+            <a href="inferno-chapter16.html" class="chapter-link">Chapter 16 - The Final Countdown</a>
+            <a href="inferno-chapter17.html" class="chapter-link">Chapter 17 - Things Go Sideways</a>
+            <a href="inferno-chapter18.html" class="chapter-link">Chapter 18 - The Arson and the Apology</a>
+            <a href="inferno-chapter19.html" class="chapter-link">Chapter 19 - Date Night.</a>
+            <a href="inferno-chapter20.html" class="chapter-link">Chapter 20 - Surrender</a>
+            <a href="inferno-chapter21.html" class="chapter-link">Cover Art</a>
+            <a href="inferno-chapter22.html" class="chapter-link">Chapter 22 - The Workout</a>
+            <a href="inferno-chapter23.html" class="chapter-link">Chapter 23 - The Fireman’s Ball</a>
+            <a href="inferno-chapter24.html" class="chapter-link">Chapter 24 - The Unexpected Guest</a>
+            <a href="inferno-chapter25.html" class="chapter-link">Chapter 25 - Safe</a>
+            <a href="inferno-chapter26.html" class="chapter-link">Chapter 26 - Ashes to Ashes</a>
+            <a href="inferno-chapter27.html" class="chapter-link">Chapter 27 - Life Changing</a>
+            <a href="inferno-chapter28.html" class="chapter-link">Chapter 28 - Evil</a>
+            <a href="inferno-chapter29.html" class="chapter-link">Chapter 29 - Nightmare Realized</a>
+            <a href="inferno-chapter30.html" class="chapter-link">Chapter 30 - Gibson Trial</a>
+            <a href="inferno-chapter31.html" class="chapter-link">Chapter 31 - The Ride Along</a>
+            <a href="inferno-chapter32.html" class="chapter-link">Chapter 32 - House Hunting</a>
+            <a href="inferno-chapter33.html" class="chapter-link">Chapter 33 - Moving Day</a>
+            <a href="inferno-chapter34.html" class="chapter-link">Chapter 34 - Arrogance</a>
+            <a href="inferno-chapter35.html" class="chapter-link">Chapter 35 - Wildfire</a>
+            <a href="inferno-chapter36.html" class="chapter-link">Chapter 36 - Waiting</a>
+        </div>
+
+        <!-- Disqus Comment Section -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  
+                this.page.identifier = 'the-inferno'; 
+            };
+            (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+
         <a href="index.html" class="home-btn">← Back to Home</a>
     </div>
 

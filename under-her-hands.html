@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Her Hands - Writings By The Jenn</title>
+    <style>
+        body {
+            background-color: #4b5320; /* Army green fallback */
+            background-image: url('tumblr_0ecb477f9656e5b0946087e4d9df7812_95bdb753_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content-box {
+            background-color: rgba(59, 66, 25, 0.9); /* Slightly transparent so the background shows through */
+            padding: 40px;
+            border: 4px solid #000000;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 20px;
+        }
+        .story-image {
+            max-width: 100%;
+            height: auto;
+            border: 4px solid #000000;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .chapter-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .chapter-link {
+            background-color: #4b5320;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            width: 80%;
+            transition: background 0.3s;
+        }
+        .chapter-link:hover {
+            background-color: #000000;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+        .home-btn:hover {
+            background-color: #222222;
+        }
+        #disqus_thread {
+            margin-top: 50px;
+            text-align: left;
+            background-color: #cddb9f; 
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h1>Under Her Hands</h1>
+        
+        <!-- Cover art image -->
+        <img src="tumblr_0ecb477f9656e5b0946087e4d9df7812_95bdb753_1280.jpg" alt="Under Her Hands Cover" class="story-image">
+
+        <div class="chapter-grid">
+            <a href="under-chapter1.html" class="chapter-link">Chapter 1</a>
+            <a href="under-chapter2.html" class="chapter-link">Chapter 2</a>
+            <a href="under-chapter3.html" class="chapter-link">Chapter 3</a>
+        </div>
+
+        <!-- Disqus Comment Section -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  
+                this.page.identifier = 'under-her-hands'; 
+            };
+            (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+
+        <a href="index.html" class="home-btn">← Back to Home</a>
+    </div>
+
+</body>
+</html>

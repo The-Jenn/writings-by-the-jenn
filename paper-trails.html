@@ -6,7 +6,11 @@
     <title>Paper Trails - Writings By The Jenn</title>
     <style>
         body {
-            background-color: #4b5320; /* Army green */
+            background-color: #4b5320; /* Army green fallback */
+            background-image: url('tumblr_2d87f3f1fbb3cc5dede87b2ea598aa11_eed07b8c_2048.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,7 +20,7 @@
             align-items: center;
         }
         .content-box {
-            background-color: #3b4219;
+            background-color: rgba(59, 66, 25, 0.9); /* Slightly transparent so the background shows through */
             padding: 40px;
             border: 4px solid #000000;
             border-radius: 8px;
@@ -74,7 +78,7 @@
         #disqus_thread {
             margin-top: 50px;
             text-align: left;
-            background-color: #cddb9f; /* Lighter background so comments are readable */
+            background-color: #cddb9f; 
             padding: 20px;
             border-radius: 5px;
             border: 2px solid #000000;
@@ -86,9 +90,8 @@
     <div class="content-box">
         <h1>Paper Trails</h1>
         
-        <!-- Replace this URL with your direct Tumblr image link -->
-        <img src="https://64.media.tumblr.com/your-specific-image-code_1280.jpg" alt="Paper Trails Cover" class="story-image">
-
+        <!-- The cover image has been updated to your provided file -->
+        <img src="tumblr_2d87f3f1fbb3cc5dede87b2ea598aa11_eed07b8c_2048.jpg" alt="Paper Trails Cover" class="story-image">
 
         <div class="chapter-grid">
             <a href="chapter1.html" class="chapter-link">Chapter 1</a>

@@ -64,6 +64,36 @@
             background-color: #000000;
             padding-left: 35px;
         }
+        
+        /* Visitor Counter Styling */
+        .jenn-counter-box {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            background-color: rgba(30, 35, 10, 0.85);
+            border: 2px solid #000000;
+            padding: 12px 20px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+        .jenn-counter-title {
+            font-size: 0.8rem;
+            color: #cddb9f;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .jenn-counter-digits {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #111111;
+            padding: 4px 12px;
+            border-radius: 4px;
+            border: 1px solid #4b5320;
+            letter-spacing: 3px;
+        }
+
         .disclaimer {
             font-size: 0.85rem;
             color: #d4d9bc;
@@ -90,19 +120,46 @@
             <a href="locus-of-control.html" class="story-link">Locus Of Control</a>
         </div>
 
+        <!-- Visitor Page Counter Widget -->
+        <div class="jenn-counter-box">
+            <div class="jenn-counter-title">Library Visitors</div>
+            <div id="jenn-visitor-count" class="jenn-counter-digits">000482</div>
+        </div>
+
         <!-- Disclaimer -->
         <div class="disclaimer">
             I have no rights to these characters; only the Alternate Universe they live in.
         </div>
     </div>
 
-    <!-- Script to block keyboard shortcuts for copying/inspecting -->
+    <!-- Script to block keyboard shortcuts for copying/inspecting and handle counter -->
     <script>
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { 
                 e.preventDefault(); 
             }
         });
+
+        // Simple unique visitor counter using localStorage
+        (function() {
+            let visits = localStorage.getItem('jenn_site_visits');
+            if (!visits) {
+                visits = 482; // Starting baseline number
+            } else {
+                visits = parseInt(visits);
+            }
+            
+            // Check if this is a new session
+            if (!sessionStorage.getItem('jenn_counted_session')) {
+                visits++;
+                localStorage.setItem('jenn_site_visits', visits);
+                sessionStorage.setItem('jenn_counted_session', 'true');
+            }
+
+            // Format with leading zeros (e.g. 000483)
+            let formattedCount = String(visits).padStart(6, '0');
+            document.getElementById('jenn-visitor-count').textContent = formattedCount;
+        })();
     </script>
 </body>
 </html>

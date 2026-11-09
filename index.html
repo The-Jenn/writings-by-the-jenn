@@ -6,7 +6,7 @@
     <title>Writings By The Jenn - Home</title>
     <style>
         body {
-            background-color: #4b5320; /* Army green background */
+            background-color: #4b5320; /* Army green fallback */
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,7 +14,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Protection styling matching chapter files */
+            
+            /* Text protection settings matching chapters */
             user-select: none; 
             -webkit-user-select: none;
             -ms-user-select: none;
@@ -24,43 +25,29 @@
             padding: 40px;
             border: 4px solid #000000;
             border-radius: 8px;
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             text-align: center;
         }
-        .header h1 {
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 2px;
-            color: #ffffff;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 15px;
-        }
-        .protection-notice {
-            font-size: 0.85rem;
-            color: #cddb9f;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        .disclaimer {
-            font-size: 0.8rem;
-            color: #d4d9bc;
-            margin-top: 5px;
-            margin-bottom: 30px;
-        }
-        .story-image {
+        .banner-image {
             max-width: 100%;
             height: auto;
             border: 4px solid #000000;
             border-radius: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+        .protection-notice {
+            font-size: 0.85rem;
+            color: #cddb9f;
+            margin-bottom: 25px;
+            font-style: italic;
         }
         .menu-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .story-link {
             background-color: #4b5320;
@@ -77,33 +64,43 @@
             background-color: #000000;
             padding-left: 35px;
         }
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #d4d9bc;
+            border-top: 2px solid #000000;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body oncontextmenu="return false;" oncopy="return false;" oncut="return false;" ondragstart="return false;" onselectstart="return false;">
 
     <div class="content-box">
-        <div class="header">
-            <h1>Writings By The Jenn</h1>
-            <div class="protection-notice">Protected content — copying, printing, and unauthorized text selection are disabled.</div>
-            <div class="disclaimer">Disclaimer: I own no rights to the characters; all rights to the Alternate Universe (AU) belong to the author.</div>
+        <!-- Artsy Collage Banner Image -->
+        <img src="77fc7c46-5538-43ff-b000-4f02f9c3639e.webp" alt="Writings By The Jenn Banner" class="banner-image">
+
+        <div class="protection-notice">Protected content — copying, printing, and text selection are disabled.</div>
+
+        <!-- All Five Stories -->
+        <div class="menu-container">
+            <a href="paper-trails.html" class="story-link">Paper Trails</a>
+            <a href="the-inferno.html" class="story-link">The Inferno</a>
+            <a href="adjourned-affections.html" class="story-link">Adjourned Affections</a>
+            <a href="under-her-hands.html" class="story-link">Under Her Hands</a>
         </div>
 
-        <!-- Creative Arsty Photo Collage Cover -->
-        <Image src="image_generation_content/7166889651754011026" alt="Artsy Photo Collage Cover" class="story-image" />
-
-        <div class="menu-container">
-            <a href="paper-trails.html" class="story-link">1. Paper Trails</a>
-            <a href="the-inferno.html" class="story-link">2. The Inferno</a>
-            <a href="adjourned-affections.html" class="story-link">3. Adjourned Affections</a>
-            <a href="under-her-hands.html" class="story-link">4. Under Her Hands</a>
-            <!-- Add link for your 5th story page here when ready -->
-            <a href="#" class="story-link">5. [Fifth Story Title]</a>
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            I have no rights to these characters; only the Alternate Universe they live in.
         </div>
     </div>
 
+    <!-- Script to block keyboard shortcuts for copying/inspecting -->
     <script>
         document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { e.preventDefault(); }
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { 
+                e.preventDefault(); 
+            }
         });
     </script>
 </body>

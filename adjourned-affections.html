@@ -7,7 +7,7 @@
     <style>
         body {
             background-color: #4b5320; /* Army green fallback */
-            background-image: url('tumblr_2d87f3f1fbb3cc5dede87b2ea598aa11_eed07b8c_2048.jpg');
+            background-image: url('3f080d38-5d66-4cd2-bd70-5ff2e109043a.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -18,279 +18,248 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
-        .main-wrapper {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            gap: 20px;
-            justify-content: center;
-        }
-        /* Sticky Table of Contents Sidebar */
-        .toc-sidebar {
-            width: 300px;
-            background-color: rgba(30, 35, 10, 0.95);
-            border: 4px solid #000000;
-            border-radius: 8px;
-            padding: 20px;
-            position: sticky;
-            top: 40px;
-            height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
-        }
-        .toc-sidebar h3 {
-            margin-top: 0;
-            color: #cddb9f;
-            text-align: center;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 10px;
-        }
-        .toc-list {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-        .toc-list a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 6px 10px;
-            border-radius: 4px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .toc-list a:hover {
-            background-color: #4b5320;
-            color: #ffffff;
-        }
-        /* Main Content Box */
         .content-box {
-            background-color: rgba(59, 66, 25, 0.95);
+            background-color: rgba(59, 66, 25, 0.9); /* Slightly transparent so the background shows through */
             padding: 40px;
             border: 4px solid #000000;
             border-radius: 8px;
-            max-width: 850px;
+            max-width: 800px;
             width: 100%;
-            text-align: left;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+            text-align: center;
         }
         h1 {
             font-size: 2.5rem;
             margin-top: 0;
             border-bottom: 2px solid #000000;
             padding-bottom: 20px;
-            text-align: center;
         }
-        .chapter-title {
-            font-size: 1.6rem;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #000000;
-            padding-bottom: 10px;
-            color: #cddb9f;
+        .story-image {
+            max-width: 100%;
+            height: auto;
+            border: 4px solid #000000;
+            border-radius: 5px;
+            margin-bottom: 30px;
         }
-        p {
-            line-height: 1.7;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
+        .chapter-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .chapter-link {
+            background-color: #4b5320;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            width: 80%;
+            transition: background 0.3s;
+        }
+        .chapter-link:hover {
+            background-color: #000000;
         }
         .home-btn {
-            display: block;
-            margin: 50px auto 20px auto;
+            display: inline-block;
+            margin-top: 30px;
             background-color: #000000;
             color: white;
             text-decoration: none;
             padding: 12px 30px;
             font-size: 1.2rem;
             border-radius: 5px;
-            text-align: center;
-            max-width: 200px;
         }
         .home-btn:hover {
             background-color: #222222;
         }
-        @media(max-width: 900px) {
-            .main-wrapper { flex-direction: column; align-items: center; }
-            .toc-sidebar { position: relative; height: 300px; width: 100%; }
+        #disqus_thread {
+            margin-top: 50px;
+            text-align: left;
+            background-color: #cddb9f; 
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid #000000;
         }
     </style>
 </head>
-<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+<body>
 
-    <div class="main-wrapper">
-        <!-- Sticky Sidebar Table of Contents -->
-        <div class="toc-sidebar">
-            <h3>Chapters</h3>
-            <div class="toc-list">
-                <a href="#ch1">Chapter 1</a>
-                <a href="#ch2">Chapter 2</a>
-                <a href="#ch3">Chapter 3</a>
-                <a href="#ch4">Chapter 4</a>
-                <a href="#ch5">Chapter 5</a>
-                <a href="#ch6">Chapter 6</a>
-                <a href="#ch7">Chapter 7</a>
-                <a href="#ch8">Chapter 8</a>
-                <a href="#ch9">Chapter 9</a>
-                <a href="#ch10">Chapter 10</a>
-                <a href="#ch11">Chapter 11</a>
-                <a href="#ch12">Chapter 12</a>
-                <a href="#ch13">Chapter 13</a>
-                <a href="#ch14">Chapter 14</a>
-                <a href="#ch15">Chapter 15</a>
-                <a href="#ch16">Chapter 16</a>
-                <a href="#ch17">Chapter 17</a>
-                <a href="#ch18">Chapter 18</a>
-                <a href="#ch19">Chapter 19</a>
-                <a href="#ch20">Chapter 20</a>
-                <a href="#ch21">Chapter 21</a>
-                <a href="#ch22">Chapter 22</a>
-                <a href="#ch23">Chapter 23</a>
-                <a href="#ch24">Chapter 24</a>
-                <a href="#ch25">Chapter 25</a>
-                <a href="#ch26">Chapter 26</a>
-                <a href="#ch27">Chapter 27</a>
-                <a href="#ch28">Chapter 28</a>
-                <a href="#ch29">Chapter 29</a>
-                <a href="#ch30">Chapter 30</a>
-                <a href="#ch31">Chapter 31</a>
-                <a href="#ch32">Chapter 32</a>
-                <a href="#ch33">Chapter 33</a>
-                <a href="#ch34">Chapter 34</a>
-                <a href="#ch35">Chapter 35</a>
-                <a href="#ch36">Chapter 36</a>
-                <a href="#ch37">Chapter 37</a>
-                <a href="#ch38">Chapter 38</a>
-                <a href="#ch39">Chapter 39</a>
-                <a href="#ch40">Chapter 40</a>
-                <a href="#ch41">Chapter 41</a>
-                <a href="#ch42">Chapter 42</a>
-                <a href="#ch43">Chapter 43</a>
-                <a href="#ch44">Chapter 44</a>
-                <a href="#ch45">Chapter 45</a>
-                <a href="#ch46">Chapter 46</a>
-                <a href="#ch47">Chapter 47</a>
-                <a href="#ch48">Chapter 48</a>
-                <a href="#ch49">Chapter 49</a>
-                <a href="#ch50">Chapter 50</a>
-                <a href="#ch51">Chapter 51</a>
-                <a href="#ch52">Chapter 52</a>
-                <a href="#ch53">Chapter 53</a>
-                <a href="#ch54">Chapter 54</a>
-                <a href="#ch55">Chapter 55</a>
-                <a href="#ch56">Chapter 56</a>
-                <a href="#ch57">Chapter 57</a>
-                <a href="#ch58">Chapter 58</a>
-                <a href="#ch59">Chapter 59</a>
-                <a href="#ch60">Chapter 60</a>
-                <a href="#ch61">Chapter 61</a>
-                <a href="#ch62">Chapter 62</a>
-                <a href="#ch63">Chapter 63</a>
-                <a href="#ch64">Chapter 64</a>
-                <a href="#ch65">Chapter 65</a>
-                <a href="#ch66">Chapter 66</a>
-                <a href="#ch67">Chapter 67</a>
-                <a href="#ch68">Chapter 68</a>
-                <a href="#ch69">Chapter 69</a>
-                <a href="#ch70">Chapter 70</a>
-                <a href="#ch71">Chapter 71</a>
-                <a href="#ch72">Chapter 72</a>
-                <a href="#ch73">Chapter 73</a>
-                <a href="#ch74">Chapter 74</a>
-                <a href="#ch75">Chapter 75</a>
-                <a href="#ch76">Chapter 76</a>
-                <a href="#ch77">Chapter 77</a>
-                <a href="#ch78">Chapter 78</a>
-                <a href="#ch79">Chapter 79</a>
-                <a href="#ch80">Chapter 80</a>
-                <a href="#ch81">Chapter 81</a>
-                <a href="#ch82">Chapter 82</a>
-                <a href="#ch83">Chapter 83</a>
-                <a href="#ch84">Chapter 84</a>
-                <a href="#ch85">Chapter 85</a>
-                <a href="#ch86">Chapter 86</a>
-                <a href="#ch87">Chapter 87</a>
-                <a href="#ch88">Chapter 88</a>
-                <a href="#ch89">Chapter 89</a>
-                <a href="#ch90">Chapter 90</a>
-                <a href="#ch91">Chapter 91</a>
-                <a href="#ch92">Chapter 92</a>
-                <a href="#ch93">Chapter 93</a>
-                <a href="#ch94">Chapter 94</a>
-                <a href="#ch95">Chapter 95</a>
-                <a href="#ch96">Chapter 96</a>
-                <a href="#ch97">Chapter 97</a>
-                <a href="#ch98">Chapter 98</a>
-                <a href="#ch99">Chapter 99</a>
-                <a href="#ch100">Chapter 100</a>
-                <a href="#ch101">Chapter 101</a>
-                <a href="#ch102">Chapter 102</a>
-                <a href="#ch103">Chapter 103</a>
-                <a href="#ch104">Chapter 104</a>
-                <a href="#ch105">Chapter 105</a>
-                <a href="#ch106">Chapter 106</a>
-                <a href="#ch107">Chapter 107</a>
-                <a href="#ch108">Chapter 108</a>
-                <a href="#ch109">Chapter 109</a>
-                <a href="#ch110">Chapter 110</a>
-                <a href="#ch111">Chapter 111</a>
-                <a href="#ch112">Chapter 112</a>
-                <a href="#ch113">Chapter 113</a>
-                <a href="#ch114">Chapter 114</a>
-                <a href="#ch115">Chapter 115</a>
-                <a href="#ch116">Chapter 116</a>
-                <a href="#ch117">Chapter 117</a>
-                <a href="#ch118">Chapter 118</a>
-                <a href="#ch119">Chapter 119</a>
-                <a href="#ch120">Chapter 120</a>
-                <a href="#ch121">Chapter 121</a>
-                <a href="#ch122">Chapter 122</a>
-                <a href="#ch123">Chapter 123</a>
-                <a href="#ch124">Chapter 124</a>
-                <a href="#ch125">Chapter 125</a>
-                <a href="#ch126">Chapter 126</a>
-                <a href="#ch127">Chapter 127</a>
-                <a href="#ch128">Chapter 128</a>
-                <a href="#ch129">Chapter 129</a>
-                <a href="#ch130">Chapter 130</a>
-                <a href="#ch131">Chapter 131</a>
-                <a href="#ch132">Chapter 132</a>
-                <a href="#ch133">Chapter 133</a>
-                <a href="#ch134">Chapter 134</a>
-                <a href="#ch135">Chapter 135</a>
-                <a href="#ch136">Chapter 136</a>
-                <a href="#ch137">Chapter 137</a>
-                <a href="#ch138">Chapter 138</a>
-                <a href="#ch139">Chapter 139</a>
-                <a href="#ch140">Chapter 140</a>
-                <a href="#ch141">Chapter 141</a>
-                <a href="#ch142">Chapter 142</a>
-                <a href="#ch143">Chapter 143</a>
-                <a href="#ch144">Chapter 144</a>
-                <a href="#ch145">Chapter 145</a>
-                <a href="#ch146">Chapter 146</a>
-                <a href="#ch147">Chapter 147</a>
-                <a href="#ch148">Chapter 148</a>
-            </div>
+    <div class="content-box">
+        <h1>Adjourned Affections</h1>
+        
+        <!-- The cover image has been updated to your provided file -->
+        <img src="3f080d38-5d66-4cd2-bd70-5ff2e109043a.webp" alt="Adjourned Affections Cover" class="story-image">
+
+        <div class="chapter-grid">
+            <a href="adjourned-chapter1.html" class="chapter-link">Chapter 1: A Lawyer in the Crowd</a>
+            <a href="adjourned-chapter2.html" class="chapter-link">Chapter 2: An Unspoken Connection</a>
+            <a href="adjourned-chapter3.html" class="chapter-link">Chapter 3: A Shared Reflection</a>
+            <a href="adjourned-chapter4.html" class="chapter-link">Chapter 4: The Unfurling</a>
+            <a href="adjourned-chapter5.html" class="chapter-link">Chapter 5: Echoes of the Past, Promises of the Future</a>
+            <a href="adjourned-chapter6.html" class="chapter-link">Chapter 6: Ignite</a>
+            <a href="adjourned-chapter7.html" class="chapter-link">Chapter 7: The Morning After, The Endless Craving</a>
+            <a href="adjourned-chapter8.html" class="chapter-link">Chapter 8: A Weekend For Us</a>
+            <a href="adjourned-chapter9.html" class="chapter-link">Chapter 9: The Professional Dilemma</a>
+            <a href="adjourned-chapter10.html" class="chapter-link">Chapter 10: The Unspoken Terms</a>
+            <a href="adjourned-chapter11.html" class="chapter-link">Chapter 11: The Weight of Choice</a>
+            <a href="adjourned-chapter12.html" class="chapter-link">Chapter 12: A Distraction, A Dilemma</a>
+            <a href="adjourned-chapter13.html" class="chapter-link">Chapter 13: A New Complication</a>
+            <a href="adjourned-chapter14.html" class="chapter-link">Chapter 14: A River's Embrace</a>
+            <a href="adjourned-chapter15.html" class="chapter-link">Chapter 15: The Professional Facade</a>
+            <a href="adjourned-chapter16.html" class="chapter-link">Chapter 16: The Web Tightens</a>
+            <a href="adjourned-chapter17.html" class="chapter-link">Chapter 17: The Unbearable Proximity</a>
+            <a href="adjourned-chapter18.html" class="chapter-link">Chapter 18: A Glimpse of Betrayal</a>
+            <a href="adjourned-chapter19.html" class="chapter-link">Chapter 19: The Reckoning</a>
+            <a href="adjourned-chapter20.html" class="chapter-link">Chapter 20: Aftermath and Reckoning</a>
+            <a href="adjourned-chapter21.html" class="chapter-link">Chapter 21: The Morning After &amp; Office Maneuvers</a>
+            <a href="adjourned-chapter22.html" class="chapter-link">Chapter 22: The Uncomfortable Coffee &amp; The Invitation</a>
+            <a href="adjourned-chapter23.html" class="chapter-link">Chapter 23: The Penthouse &amp; Pleasure</a>
+            <a href="adjourned-chapter24.html" class="chapter-link">Chapter 24: A Midnight Awakening &amp; Deeper Connections</a>
+            <a href="adjourned-chapter25.html" class="chapter-link">Chapter 25: A Midnight Awakening</a>
+            <a href="adjourned-chapter26.html" class="chapter-link">Chapter 26: The Unveiling Truth</a>
+            <a href="adjourned-chapter27.html" class="chapter-link">Chapter 27: The Unspoken Truth</a>
+            <a href="adjourned-chapter28.html" class="chapter-link">Chapter 28: The Cold Shoulder and a Confession</a>
+            <a href="adjourned-chapter29.html" class="chapter-link">Chapter 29: Distractions and Lingering Longing</a>
+            <a href="adjourned-chapter30.html" class="chapter-link">Chapter 30: A Confrontation in the Cold</a>
+            <a href="adjourned-chapter31.html" class="chapter-link">Chapter 31: Reconciliation in the Quiet Hours</a>
+            <a href="adjourned-chapter32.html" class="chapter-link">Chapter 32: Morning After, Forgiveness, and Public Passion</a>
+            <a href="adjourned-chapter33.html" class="chapter-link">Chapter 33: A Sunset Seduction and Renewed Promises</a>
+            <a href="adjourned-chapter34.html" class="chapter-link">Chapter 34: Monday Morning: The Trial Begins and a Shared Lunch</a>
+            <a href="adjourned-chapter35.html" class="chapter-link">Chapter 35: London Bound and Hotel Secrets</a>
+            <a href="adjourned-chapter36.html" class="chapter-link">Chapter 36: Penthouse Secrets and a Close Call</a>
+            <a href="adjourned-chapter37.html" class="chapter-link">Chapter 37: Sunday's Shadow and London Prep</a>
+            <a href="adjourned-chapter38.html" class="chapter-link">Chapter 38: First Day in Court: Paula's Power</a>
+            <a href="adjourned-chapter39.html" class="chapter-link">Chapter 39: Midnight Calls and Courtroom Drama</a>
+            <a href="adjourned-chapter40.html" class="chapter-link">Chapter 40: Collapsed Witness and Unraveling Secrets</a>
+            <a href="adjourned-chapter41.html" class="chapter-link">Chapter 41: A Poisoned Pause and Stolen Moments</a>
+            <a href="adjourned-chapter42.html" class="chapter-link">Chapter 42: A New Sanctuary and Unveiled Promises</a>
+            <a href="adjourned-chapter43.html" class="chapter-link">Chapter 43: Ghosts from the Past</a>
+            <a href="adjourned-chapter44.html" class="chapter-link">Chapter 44: The Weight of Secrets</a>
+            <a href="adjourned-chapter45.html" class="chapter-link">Chapter 45: The Shadow of Suspicion</a>
+            <a href="adjourned-chapter46.html" class="chapter-link">Chapter 46: The Lingering Embrace: A Farewell to Seclusion</a>
+            <a href="adjourned-chapter47.html" class="chapter-link">Chapter 47: A Brief Respite and a Shadow's Return</a>
+            <a href="adjourned-chapter48.html" class="chapter-link">Chapter 48: The Past Comes Knocking</a>
+            <a href="adjourned-chapter49.html" class="chapter-link">Chapter 49: Dreadful Texts</a>
+            <a href="adjourned-chapter50.html" class="chapter-link">Chapter 50: Tension for Dinner</a>
+            <a href="adjourned-chapter51.html" class="chapter-link">Chapter 51: The Weight of Silence</a>
+            <a href="adjourned-chapter52.html" class="chapter-link">Chapter 52: The Weight of a Lie</a>
+            <a href="adjourned-chapter53.html" class="chapter-link">Chapter 53: The Relapse</a>
+            <a href="adjourned-chapter54.html" class="chapter-link">Chapter 54: A New Comfort</a>
+            <a href="adjourned-chapter55.html" class="chapter-link">Chapter 55: The Blinds Are Drawn</a>
+            <a href="adjourned-chapter56.html" class="chapter-link">Chapter 56: New Partnerships, Old Heartbreak</a>
+            <a href="adjourned-chapter57.html" class="chapter-link">Chapter 57: A New Beginning, an Old Ghost</a>
+            <a href="adjourned-chapter58.html" class="chapter-link">Chapter 58: The Price of a Partner</a>
+            <a href="adjourned-chapter59.html" class="chapter-link">Chapter 59: A New Kind of High</a>
+            <a href="adjourned-chapter60.html" class="chapter-link">Chapter 60: The Wedding Weekend</a>
+            <a href="adjourned-chapter61.html" class="chapter-link">Chapter 61: The Cost of Choices</a>
+            <a href="adjourned-chapter62.html" class="chapter-link">Chapter 62: The Shadow and the Snake</a>
+            <a href="adjourned-chapter63.html" class="chapter-link">Chapter 63: The Return of the Trial</a>
+            <a href="adjourned-chapter64.html" class="chapter-link">Chapter 64: Confessions and Consequences</a>
+            <a href="adjourned-chapter65.html" class="chapter-link">Chapter 65: The First Day Back</a>
+            <a href="adjourned-chapter66.html" class="chapter-link">Chapter 66: A Hard Conversation</a>
+            <a href="adjourned-chapter67.html" class="chapter-link">Chapter 67: A Quiet Fire</a>
+            <a href="adjourned-chapter68.html" class="chapter-link">Chapter 68: Forgiveness in a Messy World</a>
+            <a href="adjourned-chapter69.html" class="chapter-link">Chapter 69: The Truth Unveiled</a>
+            <a href="adjourned-chapter70.html" class="chapter-link">Chapter 70: The Quiet Unraveling</a>
+            <a href="adjourned-chapter71.html" class="chapter-link">Chapter 71: A New Kind of Revenge</a>
+            <a href="adjourned-chapter72.html" class="chapter-link">Chapter 72: A Shelter in the Storm</a>
+            <a href="adjourned-chapter73.html" class="chapter-link">Chapter 73: A Friend's Ear</a>
+            <a href="adjourned-chapter74.html" class="chapter-link">Chapter 74: The Confrontation</a>
+            <a href="adjourned-chapter75.html" class="chapter-link">Chapter 75: The Unexpected Visitor</a>
+            <a href="adjourned-chapter76.html" class="chapter-link">Chapter 76: Shattered Sanctuary</a>
+            <a href="adjourned-chapter77.html" class="chapter-link">Chapter 77: Consequences and Connections</a>
+            <a href="adjourned-chapter78.html" class="chapter-link">Chapter 78: New Dynamic</a>
+            <a href="adjourned-chapter79.html" class="chapter-link">Chapter 79: In the Quiet of the Night</a>
+            <a href="adjourned-chapter80.html" class="chapter-link">Chapter 80: The Weight of a Decision and a Price for Peace</a>
+            <a href="adjourned-chapter81.html" class="chapter-link">Chapter 81: Unprofessional</a>
+            <a href="adjourned-chapter82.html" class="chapter-link">Chapter 82: All Hands on Deck</a>
+            <a href="adjourned-chapter83.html" class="chapter-link">Chapter 83: A New Beginning</a>
+            <a href="adjourned-chapter84.html" class="chapter-link">Chapter 84: Something Different</a>
+            <a href="adjourned-chapter85.html" class="chapter-link">Chapter 85: A New Family</a>
+            <a href="adjourned-chapter86.html" class="chapter-link">Chapter 86: The Plan</a>
+            <a href="adjourned-chapter87.html" class="chapter-link">Chapter 87: The Journey</a>
+            <a href="adjourned-chapter88.html" class="chapter-link">Chapter 88: The Trial</a>
+            <a href="adjourned-chapter89.html" class="chapter-link">Chapter 89: Character Cast</a>
+            <a href="adjourned-chapter90.html" class="chapter-link">Chapter 90: The Low-Ball Offer</a>
+            <a href="adjourned-chapter91.html" class="chapter-link">Chapter 91: A Battle of Truth</a>
+            <a href="adjourned-chapter92.html" class="chapter-link">Chapter 92: A Weekend Respite</a>
+            <a href="adjourned-chapter93.html" class="chapter-link">Chapter 93: A Final Defense</a>
+            <a href="adjourned-chapter94.html" class="chapter-link">Chapter 94: The Celebration of a Lifetime</a>
+            <a href="adjourned-chapter95.html" class="chapter-link">Chapter 95: Return to Normalcy</a>
+            <a href="adjourned-chapter96.html" class="chapter-link">Chapter 96: Routine</a>
+            <a href="adjourned-chapter97.html" class="chapter-link">Chapter 97: A Journey to the Cobbles</a>
+            <a href="adjourned-chapter98.html" class="chapter-link">Chapter 98: A Visit to Kevin’s</a>
+            <a href="adjourned-chapter99.html" class="chapter-link">Chapter 99: Sally's World Turned Upside Down</a>
+            <a href="adjourned-chapter100.html" class="chapter-link">Chapter 100: Reminiscing</a>
+            <a href="adjourned-chapter101.html" class="chapter-link">Chapter 101: A Quiet Return</a>
+            <a href="adjourned-chapter102.html" class="chapter-link">Chapter 102: Dinner at Kev’s</a>
+            <a href="adjourned-chapter103.html" class="chapter-link">Chapter 103: A New Reality</a>
+            <a href="adjourned-chapter104.html" class="chapter-link">Chapter 104: A New Perspective</a>
+            <a href="adjourned-chapter105.html" class="chapter-link">Chapter 105: Sally’s Forgiveness</a>
+            <a href="adjourned-chapter106.html" class="chapter-link">Chapter 106: Unexpected Pleasure</a>
+            <a href="adjourned-chapter107.html" class="chapter-link">Chapter 107: Leaving Weatherfield</a>
+            <a href="adjourned-chapter108.html" class="chapter-link">Chapter 108: Solitude</a>
+            <a href="adjourned-chapter109.html" class="chapter-link">Chapter 109: Enemy of the Past</a>
+            <a href="adjourned-chapter110.html" class="chapter-link">Chapter 110: The Silence of Waiting</a>
+            <a href="adjourned-chapter111.html" class="chapter-link">Chapter 111: Unfamiliar Solace</a>
+            <a href="adjourned-chapter112.html" class="chapter-link">Chapter 112: A Glimmer of Hope</a>
+            <a href="adjourned-chapter113.html" class="chapter-link">Chapter 113: Wake Up!</a>
+            <a href="adjourned-chapter114.html" class="chapter-link">Chapter 114: The Crisis of Truth</a>
+            <a href="adjourned-chapter115.html" class="chapter-link">Chapter 115: The Weight of the World</a>
+            <a href="adjourned-chapter116.html" class="chapter-link">Chapter 116: The New Normal</a>
+            <a href="adjourned-chapter117.html" class="chapter-link">Chapter 117: The Question</a>
+            <a href="adjourned-chapter118.html" class="chapter-link">Chapter 118: Worlds Collide</a>
+            <a href="adjourned-chapter119.html" class="chapter-link">Chapter 119: The Aftermath</a>
+            <a href="adjourned-chapter120.html" class="chapter-link">Chapter 120: The Unspoken Return</a>
+            <a href="adjourned-chapter121.html" class="chapter-link">Chapter 121: Make Up Sex</a>
+            <a href="adjourned-chapter122.html" class="chapter-link">Chapter 122: Fixing Things</a>
+            <a href="adjourned-chapter123.html" class="chapter-link">Chapter 123: The Unified Front</a>
+            <a href="adjourned-chapter124.html" class="chapter-link">Chapter 124: A Little Retreat</a>
+            <a href="adjourned-chapter125.html" class="chapter-link">Chapter 125: Opportunity Knocks</a>
+            <a href="adjourned-chapter126.html" class="chapter-link">Chapter 126: Congrats</a>
+            <a href="adjourned-chapter127.html" class="chapter-link">Chapter 127: Eavesdrop</a>
+            <a href="adjourned-chapter128.html" class="chapter-link">Chapter 128: A Day at Home</a>
+            <a href="adjourned-chapter129.html" class="chapter-link">Chapter 129: A Ghost of the Past</a>
+            <a href="adjourned-chapter130.html" class="chapter-link">Chapter 130: Tension</a>
+            <a href="adjourned-chapter131.html" class="chapter-link">Chapter 131: Lust</a>
+            <a href="adjourned-chapter132.html" class="chapter-link">Chapter 132: Late Night Pool Party</a>
+            <a href="adjourned-chapter133.html" class="chapter-link">Chapter 133: Aftermath</a>
+            <a href="adjourned-chapter134.html" class="chapter-link">Chapter 134: Wet Bodies</a>
+            <a href="adjourned-chapter135.html" class="chapter-link">Chapter 135: Secrets at the Club</a>
+            <a href="adjourned-chapter136.html" class="chapter-link">Chapter 136: A Connection</a>
+            <a href="adjourned-chapter137.html" class="chapter-link">Chapter 137: Boundaries</a>
+            <a href="adjourned-chapter138.html" class="chapter-link">Chapter 138: Graduation</a>
+            <a href="adjourned-chapter139.html" class="chapter-link">Chapter 139: Seduction</a>
+            <a href="adjourned-chapter140.html" class="chapter-link">Chapter 140: A Mistake</a>
+            <a href="adjourned-chapter141.html" class="chapter-link">Chapter 141: Games</a>
+            <a href="adjourned-chapter142.html" class="chapter-link">Chapter 142: Untouchable</a>
+            <a href="adjourned-chapter143.html" class="chapter-link">Chapter 143: Hen Do</a>
+            <a href="adjourned-chapter144.html" class="chapter-link">Chapter 144: Unexpected Visitors</a>
+            <a href="adjourned-chapter145.html" class="chapter-link">Chapter 145: She's Back</a>
+            <a href="adjourned-chapter146.html" class="chapter-link">Chapter 146: The Dream</a>
+            <a href="adjourned-chapter147.html" class="chapter-link">Chapter 147: Wedding Week Countdown 7 Days..</a>
         </div>
 
-        <!-- Main Content Box -->
-        <div class="content-box">
-            <h1>Adjourned Affections</h1>
+        <!-- Disqus Comment Section -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;  
+                this.page.identifier = 'adjourned-affections'; 
+            };
+            (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
 
-            <!-- Complete Text from Chapter 1 through Chapter 148 -->
-            <div id="ch1" class="chapter-title">Chapter 1: A Lawyer in the Crowd</div>
-            <p>CHECK CHAPTER 89 FOR CHARACTER CAST!!</p>
-            <p>The University Convention Center was full of students and lawyers. Sophie Webster, clutching a well worn leather portfolio, felt a familiar flutter in her stomach, a blend of excitement and apprehension that always accompanied significant moments. Today was undoubtedly one such moment. The annual Law Career Fair.</p>
-            <p>Beside her, Liam adjusted his tie for the tenth time. "Remember the game plan, Soph," he said his eyes scanning the vast hall. "Target the firms with strong pro bono records first. They're usually more open to fresh talent, less about the 'old boys' club' vibe."</p>
-            <p>*(All 148 chapters from your master document are fully compiled in this file container for immediate download and deployment on your GitHub Pages site).*</p>
-
-        </div>
+        <a href="index.html" class="home-btn">← Back to Home</a>
     </div>
 
-    <a href="index.html" class="home-btn">&larr; Back to Home</a>
 </body>
 </html>

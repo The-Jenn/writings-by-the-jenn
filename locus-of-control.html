@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Locus Of Control - Writings By The Jenn</title>
-    <style>
-        body { background-color: #0b3d0b; color: white; font-family: Arial; padding: 40px; text-align: center; }
-        a { color: #4caf50; text-decoration: none; font-size: 1.2rem; border: 2px solid #4caf50; padding: 10px 20px; border-radius: 5px; }
-        a:hover { background-color: #4caf50; color: #0b3d0b; }
-    </style>
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locus Of Control | Writings By The Jenn</title>
     <!-- Stencil & Clean Body Fonts -->
@@ -198,10 +188,108 @@
             border: 1px solid #2a2a2a;
             border-radius: 6px;
             padding: 25px 30px;
-<body>
-    <h1>Locus Of Control</h1>
-    <p>Chapters coming soon...</p>
-    <br><br>
-    <a href="index.html">← Back to Home</a>
+        }
+
+        /* Footer & Copyright */
+        footer {
+            margin-top: 50px;
+            background-color: #111111;
+            border-top: 2px solid #4b5320;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 0.85rem;
+            color: #888888;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
+    <header>
+        <h1>Writings By The Jenn</h1>
+        <a href="index.html" class="nav-back">&larr; Back to Main Library</a>
+    </header>
+
+    <div class="container">
+        <!-- Cover & Story Header -->
+        <div class="story-header">
+            <!-- Save your new cover image as locus-cover.jpg in your repository -->
+            <img src="locus-cover.jpg" alt="Locus Of Control Cover" class="cover-image">
+            <h2 class="story-title">Locus Of Control</h2>
+            <div class="story-author">By The Jenn</div>
+
+            <div class="interaction-bar">
+                <button class="btn-interact" onclick="giveKudos()">&#10084; Leave Kudos (<span id="kudos-count">0</span>)</button>
+            </div>
+        </div>
+
+        <!-- Chapter Directory -->
+        <div class="chapters-section">
+            <h2>Table of Contents</h2>
+            <ul class="chapter-list">
+                <li><a href="locus-chapter1.html">Chapter 1: Part 1 - The Crush</a></li>
+                <li><a href="locus-chapter2.html">Chapter 2: Part 2 - The New Variable</a></li>
+                <li><a href="locus-chapter3.html">Chapter 3: Part 3 - BRECVEMA Model</a></li>
+                <li><a href="locus-chapter4.html">Chapter 4: Part 4 - Control</a></li>
+                <li><a href="locus-chapter5.html">Chapter 5: Part 5 - Falling</a></li>
+                <li><a href="locus-chapter6.html">Chapter 6: Chapter 6 - A Break</a></li>
+                <li><a href="locus-chapter7.html">Chapter 7: Part 7 - The Fall</a></li>
+                <li><a href="locus-chapter8.html">Chapter 8: Part 8 - The Blowup</a></li>
+                <li><a href="locus-chapter9.html">Chapter 9: Part 9 - Leaving</a></li>
+            </ul>
+        </div>
+
+        <!-- Disqus Comment Section -->
+        <div class="comments-section">
+            <div id="disqus_thread"></div>
+            <script>
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-the-jenn-github-io-writings-by-the-jenn.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Writings By The Jenn. All Rights Reserved.</p>
+        <p>This work is protected. Unauthorized copying, reproduction, or distribution is strictly prohibited.</p>
+    </footer>
+
+    <!-- Security & Kudos Scripts -->
+    <script>
+        // Local Kudos Counter
+        let kudos = localStorage.getItem('locus_kudos') ? parseInt(localStorage.getItem('locus_kudos')) : 0;
+        document.getElementById('kudos-count').innerText = kudos;
+
+        function giveKudos() {
+            if (!localStorage.getItem('locus_kudos_clicked')) {
+                kudos++;
+                localStorage.setItem('locus_kudos', kudos);
+                localStorage.setItem('locus_kudos_clicked', 'true');
+                document.getElementById('kudos-count').innerText = kudos;
+                alert('Thank you for leaving Kudos!');
+            } else {
+                alert('You have already left Kudos for this story!');
+            }
+        }
+
+        // Disable Keyboard Copy/Inspect Shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
 </body>
 </html>

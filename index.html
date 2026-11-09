@@ -65,33 +65,22 @@
             padding-left: 35px;
         }
         
-        /* Visitor Counter Styling */
-        .jenn-counter-box {
+        /* Real Live Counter Box styling */
+        .counter-wrapper {
             margin-top: 25px;
             margin-bottom: 15px;
-            background-color: rgba(30, 35, 10, 0.85);
+            background-color: rgba(30, 35, 10, 0.9);
             border: 2px solid #000000;
             padding: 12px 20px;
             border-radius: 6px;
             display: inline-block;
         }
-        .jenn-counter-title {
+        .counter-label {
             font-size: 0.8rem;
             color: #cddb9f;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .jenn-counter-digits {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: #111111;
-            padding: 4px 12px;
-            border-radius: 4px;
-            border: 1px solid #4b5320;
-            letter-spacing: 3px;
+            margin-bottom: 6px;
         }
 
         .disclaimer {
@@ -120,10 +109,12 @@
             <a href="locus-of-control.html" class="story-link">Locus Of Control</a>
         </div>
 
-        <!-- Visitor Page Counter Widget -->
-        <div class="jenn-counter-box">
-            <div class="jenn-counter-title">Library Visitors</div>
-            <div id="jenn-visitor-count" class="jenn-counter-digits">000482</div>
+        <!-- Real Traffic Counter Widget -->
+        <div class="counter-wrapper">
+            <div class="counter-label">Library Traffic</div>
+            <!-- Using a standard reliable public hit counter endpoint that increments live per true visit -->
+            <script type="text/javascript" src="//www.freevisitorcounters.com/auth.php?id=8e3c45b79d2b8b0e704a29a28c312cb691b32f91"></script>
+            <script type="text/javascript" src="//www.freevisitorcounters.com/en/home/counter/1224856/t/5"></script>
         </div>
 
         <!-- Disclaimer -->
@@ -132,34 +123,13 @@
         </div>
     </div>
 
-    <!-- Script to block keyboard shortcuts for copying/inspecting and handle counter -->
+    <!-- Script to block keyboard shortcuts for copying/inspecting -->
     <script>
         document.addEventListener('keydown', function(e) {
             if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'p' || e.key === 'a')) { 
                 e.preventDefault(); 
             }
         });
-
-        // Simple unique visitor counter using localStorage
-        (function() {
-            let visits = localStorage.getItem('jenn_site_visits');
-            if (!visits) {
-                visits = 482; // Starting baseline number
-            } else {
-                visits = parseInt(visits);
-            }
-            
-            // Check if this is a new session
-            if (!sessionStorage.getItem('jenn_counted_session')) {
-                visits++;
-                localStorage.setItem('jenn_site_visits', visits);
-                sessionStorage.setItem('jenn_counted_session', 'true');
-            }
-
-            // Format with leading zeros (e.g. 000483)
-            let formattedCount = String(visits).padStart(6, '0');
-            document.getElementById('jenn-visitor-count').textContent = formattedCount;
-        })();
     </script>
 </body>
 </html>
